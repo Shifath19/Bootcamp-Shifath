@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Golden Layout Webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            grid-template-areas: 
+                "header header header"
+                "sidebar-left main sidebar-right"
+                "footer footer footer";
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: auto 1fr auto;
+            height: 100vh;
+        }
+        header {
+            grid-area: header;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 1em;
+        }
+        footer{
+          grid-area: footer;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 1em;
+        }
+        nav {
+            background-color: #f8f9fa;
+            padding: 1em;
+            height: 100%;
+        }
+        #sidebar-left {
+            grid-area: sidebar-left;
+        }
+        #sidebar-right {
+            grid-area: sidebar-right;
+        }
+        main {
+            grid-area: main;
+            padding: 1em;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1em 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <h1>Golden Layout Webpage</h1>
+    </header>
+
+    <nav id="sidebar-left">
+        <h2>Navigation</h2>
+        <ul>
+            <li><a href="#">Link 1</a></li><br>
+            <li><a href="#">Link 2</a></li><br>
+            <li><a href="#">Link 3</a></li><br>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Content Area</h2>
+        <p>Welcome to the main content area!</p>
+        <h2>This is Main Content</h2>
+        <h3>Items Table</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Item 1</td>
+                    <td>$10</td>
+                    <td>A basic item</td>
+                </tr>
+                <tr>
+                    <td>Item 2</td>
+                    <td>$20</td>
+                    <td>A premium item</td>
+                </tr>
+                <tr>
+                    <td>Item 3</td>
+                    <td>$30</td>
+                    <td>An exclusive item</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <nav id="sidebar-right">
+        <h2>Navigation</h2>
+        <ul>
+            <li><a href="#">Link 4</a></li><br>
+            <li><a href="#">Link 5</a></li><br>
+            <li><a href="#">Link 6</a></li><br>
+        </ul>
+    </nav>
+
+    <footer>
+        <p>&copy; 2024 Golden Layout Webpage</p>
+    </footer>
+</body>
+</html>

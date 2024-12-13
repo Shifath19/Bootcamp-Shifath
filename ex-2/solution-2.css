@@ -1,0 +1,123 @@
+ 
+:root {
+  --primary-color: #3498db; 
+  --secondary-color: #2ecc71;  
+  --header-font-size: 2rem;  
+  --body-font-size: 1rem; 
+  --margin-spacing: 16px; 
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-areas: 
+      "header header header"
+      "sidebar-left main sidebar-right"
+      "footer footer footer";
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+}
+header {
+  grid-area: header;
+  background-color: #f4f4f4;
+  text-align: center;
+  padding: 1em;
+}
+
+footer{
+  grid-area: footer;
+  background-color: #f4f4f4;
+  text-align: center;
+  padding: 1em;
+}
+
+nav {
+  background-color: #f8f9fa;
+  padding: 1em;
+  height: 100%;
+}
+#sidebar-left {
+  grid-area: sidebar-left;
+}
+#sidebar-right {
+  grid-area: sidebar-right;
+}
+main {
+  grid-area: main;
+  padding: 1em;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+}
+table, th, td {
+  border: 1px solid #ddd;
+}
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+th {
+  background-color: #f4f4f4;
+}
+img {
+  max-width: 100px;
+  height: auto;
+}
+ 
+body {
+    font-family: Arial, sans-serif;
+    color: var(--primary-color, black);  
+    margin: var(--margin-spacing, 10px);  
+}
+
+ 
+header h1 {
+    font-size: var(--header-font-size, 1.5rem); 
+    color: var(--primary-color, black);  
+}
+ 
+p {
+    font-size: var(--body-font-size, 0.875rem);   
+    margin-bottom: var(--margin-spacing, 10px);  
+    color: var(--secondary-color, grey); 
+}
+
+ 
+ul li {
+    margin-bottom: calc(var(--margin-spacing, 10px) / 2); 
+}
+
+ 
+table {
+    border: 1px solid var(--primary-color, black);
+    width: 100%;
+    border-collapse: collapse;
+    margin: var(--margin-spacing, 10px) 0;
+}
+
+th {
+    background-color: var(--primary-color, black);
+    color: white;
+    padding: var(--margin-spacing, 10px);
+    text-align: left;
+}
+
+td {
+    color: var(--secondary-color, grey);  
+    font-size: var(--body-font-size, 0.875rem);  
+    padding: var(--margin-spacing, 10px);
+}
+
+ 
+tr:nth-child(odd) {
+    background-color: #efeded;  
+}
+
+tr:nth-child(even) {
+    background-color: wheat; 
+}

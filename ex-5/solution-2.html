@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Golden Layout with CSS Grid</title>
+    <link rel="stylesheet" href="solution-2.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">Header</header>
+      <aside class="sidebar-left">Sidebar Left: Some navigation links and info.</aside>
+      <main class="main-content">
+        <h1>Main Content:</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget libero nisl. Proin ac dui et lectus condimentum feugiat. Aliquam erat volutpat. 
+          Sed porttitor, odio nec aliquam rhoncus, felis purus hendrerit metus, nec auctor orci sapien at dui. Donec at urna malesuada, luctus purus a, 
+          volutpat libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget libero nisl. Proin ac dui et lectus condimentum feugiat. Aliquam erat volutpat. 
+          Sed porttitor, odio nec aliquam rhoncus, felis purus hendrerit metus, nec auctor orci sapien at dui. Donec at urna malesuada, luctus purus a, 
+          volutpat libero.
+        </p><br>
+        <h2>Handling Overflow Content</h2><br>
+        <p>
+          Overflow Handling:
+
+In .main-content, we use overflow-y: auto; to handle any overflow content vertically. This means if the content exceeds the defined height, a scrollbar will appear.
+The max-height: 80vh; property ensures the main content area does not take up more than 80% of the viewport height, keeping the layout balanced.
+        </p>
+        <br>
+        <h2>Responsive Design:</h2><br>
+        <p>
+
+          Media Query (max-width: 768px):
+          When the screen width is smaller than 768px (tablet or mobile devices), the grid switches to a single column layout by using grid-template-columns: 1fr; and stacking the elements vertically. The grid-template-areas is adjusted to display elements one by one (header, main-content, sidebar-left, sidebar-right, footer).
+          Media Query (max-width: 480px):
+          For very small screens (such as phones), font sizes are adjusted using font-size to make the text more readable. The header is slightly reduced in size, and the main content font size is also adjusted.</p>
+      </main>
+      <aside class="sidebar-right">Sidebar Right: Some related articles and ads.</aside>
+      <footer class="footer">Footer: Contact Information & Links</footer>
+    </div>
+  </body>
+</html>

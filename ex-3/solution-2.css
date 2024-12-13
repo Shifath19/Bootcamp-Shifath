@@ -1,0 +1,72 @@
+/* Normalize basic styles to ensure consistent styling across browsers */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+  flex-direction: column;
+}
+
+h1, h2, h3, p {
+  text-align: center;
+  margin: 16px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #666;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: #555;
+}
+
+p {
+  font-size: 1rem;
+  color: #444;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 16px auto;
+  text-align: left;
+  width: 60%;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+blockquote {
+  font-style: italic;
+  color: #555;
+  background-color: #e9ecef;
+  padding: 16px;
+  margin: 16px auto;
+  border-left: 5px solid #3498db;
+  width: 80%;
+  text-align: center;
+}
+
+code {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #f0f0f0;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
