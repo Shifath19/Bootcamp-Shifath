@@ -3,300 +3,394 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BootCamp Week 1</title>
+    <title>BootCamp Week 1 - Modern Design</title>
     <style>
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
       }
-      body {
-        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background-color: #f4f4f9;
-        color: #242323;
-        padding: 20px;
+
+      :root {
+        --primary-color: #5084f5;
+        --secondary-color: #2b49ab;
+        --background-color: #f8fafc;
+        --card-background: #ffffff;
+        --text-primary: #1e293b;
+        --text-secondary: #475569;
+        --border-radius: 12px;
+        --transition: all 0.3s ease;
       }
+
+      body {
+        font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        background-color: var(--background-color);
+        color: var(--text-primary);
+        padding: 2rem;
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
       h1 {
         text-align: center;
-        margin-bottom: 30px;
+        margin-bottom: 2rem;
+        font-size: 2.5rem;
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        padding: 1rem;
       }
+
+      h2 {
+        text-align: center;
+        margin: 3rem 0 2rem;
+        color: var(--primary-color);
+        font-size: 1.8rem;
+      }
+
+      .section-card {
+        background: var(--card-background);
+        border-radius: var(--border-radius);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        padding: 2rem;
+        margin-bottom: 2rem;
+        transition: var(--transition);
+      }
+
+      .section-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      }
+
       table {
         width: 100%;
-        border-collapse: collapse;
-        margin: 0 auto 30px;
+        border-collapse: separate;
+        border-spacing: 0 1rem;
       }
-      th, td {
-        padding: 10px;
-        text-align: left;
-        border: 1px solid #ddd;
-      }
+
       th {
-        background-color: #4CAF50;
+        background-color: var(--primary-color);
         color: white;
+        padding: 1rem;
+        text-align: left;
+        font-weight: 600;
+        border-radius: var(--border-radius) var(--border-radius) 0 0;
       }
+
       td {
-        background-color: #fff;
+        background-color: var(--card-background);
+        padding: 1rem;
+        border-bottom: 2px solid #e2e8f0;
+        transition: var(--transition);
       }
-      a {
-        color: #3498db;
-        text-decoration: none;
+
+      tr:hover td {
+        background-color: #f1f5f9;
       }
-      a:hover {
-        text-decoration: underline;
-      }
+
       .exercise-description {
-        font-size: 16px;
-        color: #484747;
+        font-size: 0.95rem;
+        color: var(--text-secondary);
+        margin-bottom: 0.5rem;
       }
+
+      a {
+        color: var(--primary-color);
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        border-radius: 6px;
+        display: inline-block;
+        transition: var(--transition);
+        font-weight: 500;
+      }
+
+      a:hover {
+        background-color: var(--primary-color);
+        color: white;
+        transform: translateY(-2px);
+      }
+
       .notes {
         text-align: center;
-        font-weight: bold;
+      }
+
+      .notes a {
+        background-color: #f1f5f9;
+        color: var(--text-secondary);
+      }
+
+      .notes a:hover {
+        background-color: var(--primary-color);
+        color: white;
+      }
+
+      /* Multiple links in a cell */
+      td a + a {
+        margin-left: 0.5rem;
       }
 
       /* Responsive design */
       @media (max-width: 768px) {
-        table {
-          width: 100%;
-          display: block;
+        body {
+          padding: 1rem;
+        }
+
+        .section-card {
+          padding: 1rem;
           overflow-x: auto;
-          white-space: nowrap;
         }
-        th, td {
-          padding: 8px;
+
+        table {
+          font-size: 0.9rem;
         }
+
         td {
-          font-size: 12px;
+          padding: 0.75rem;
         }
+
         .exercise-description {
-          font-size: 12px;
-          font-weight: bold;
+          font-size: 0.85rem;
+        }
+
+        a {
+          padding: 0.4rem 0.8rem;
         }
       }
     </style>
   </head>
   <body>
-    <h1>Shifath-BootCamp Week 1</h1>
-    
-    <h2 style="text-align: center; margin-bottom: 20px;">HTML/CSS Exercises</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Exercise</th>
-          <th>Solution 1</th>
-          <th>Solution 2</th>
-          <th>Solution 3</th>
-          <th>Notes</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Exercise 1</td>
-          <td>
-            <p class="exercise-description">Basic Webpage with header, footer and main content</p>
-            <a href="./html-css/ex-1/solution-1.html" target="_blank">Link</a>
-          </td>
-          <td>
-            <p class="exercise-description">Golden Layout Table</p>
-            <a href="./html-css/ex-1/solution-2.html" target="_blank">Link</a>
-          </td>
-          <td>
-            <p class="exercise-description"> Additions on top of Level 2  </p>
-            <a href="./html-css/ex-1/solution-3.html" target="_blank">Link</a>
-          </td>
-          <td class="notes"><a href="./html-css/ex-1/notes.html" target="_blank">Notes</a></td>
-        </tr>
-        <tr>
-          <td>Exercise 2</td>
-          <td>
-            <p class="exercise-description">CSS Variables</p>
-            <a href="./html-css/ex-2/solution-1.html" target="_blank">Link</a>
-          </td>
-          <td>
-            <p class="exercise-description">Default Values of Variables and using nth-child</p>
-            <a href="./html-css/ex-2/solution-2.html" target="_blank">Link</a>
-          </td>
-          <td>
-            <p class="exercise-description">Variables to hold other variables and Theme switcher</p>
-            <a href="./html-css/ex-2/solution-3.html" target="_blank">Link</a>
-          </td>
-          <td class="notes"><a href="./html-css/ex-2/notes.html" target="_blank">Notes</a></td>
-        </tr>
-        <tr>
-          <td>Exercise 3</td>
-          <td>
-            <p class="exercise-description">Blog post using Classless CSS</p>
-            <a href="./html-css/ex-3/solution-1.html" target="_blank">Link</a>
-          </td>
-          <td>
-            <p class="exercise-description">Adding element and styling them</p>
-            <a href="./html-css/ex-3/solution-2.html" target="_blank">Link</a>
-          </td>
-          <td>
-            <p class="exercise-description">Using a classless CSS Framework (pure.css)</p>
-            <a href="./html-css/ex-3/solution-3.html" target="_blank">Link</a>
-          </td>
-          <td class="notes"><a href="./html-css/ex-3/notes.html" target="_blank">Notes</a></td>
-        </tr>
-        <tr>
-          <td>Exercise 4</td>
-          <td>
-            <p class="exercise-description">Centered Webpage using vh and vw</p>
-            <a href="./html-css/ex-4/solution-1.html" target="_blank">Link</a>
-          </td>
-          <td>
-            <p class="exercise-description">min(), max(), and clamp()</p>
-            <a href="./html-css/ex-4/solution-2.html" target="_blank">Link</a>
-          </td>
-          <td>
-            <p class="exercise-description">Flexible grids and fluid typography</p>
-            <a href="./html-css/ex-4/solution-3.html" target="_blank">Link</a>
-          </td>
-          <td class="notes"><a href="./html-css/ex-4/notes.html" target="_blank">Notes</a></td>
-        </tr>
-        <tr>
-          <td>Exercise 5</td>
-          <td>
-            <p class="exercise-description">Golden layout (with styling and grids this time)</p>
-            <a href="./html-css/ex-5/solution-1.html" target="_blank">Link</a>
-          </td>
-          <td>
-            <p class="exercise-description">Golden layout with Grid properties and overflow content</p>
-            <a href="./html-css/ex-5/solution-2.html" target="_blank">Link</a>
-          </td>
-          <td>
-            <p class="exercise-description">Golden layout with minmax and responsive layout</p>
-            <a href="./html-css/ex-5/solution-3.html" target="_blank">Link</a>
-          </td>
-          <td class="notes"><a href="./html-css/ex-5/notes.html" target="_blank">Notes</a></td>
-        </tr>
-        <tr>
-          <td>Exercise 6</td>
-          <td>
-            <p class="exercise-description">
-              Reading different blogs and newsletters 
-            </p>
-          
-            <a href="./html-css/ex-6/solution.html" target="_blank">Link</a>
-          </td>
-          <td class="notes"><a href="./html-css/ex-6/notes.html" target="_blank">Notes</a></td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="container">
+      <h1>Shifath-BootCamp Week 1</h1>
+      
+      <section class="section-card">
+        <h2>HTML/CSS Exercises</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Exercise</th>
+              <th>Solution 1</th>
+              <th>Solution 2</th>
+              <th>Solution 3</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Exercise 1</td>
+              <td>
+                <p class="exercise-description">Basic Webpage with header, footer and main content</p>
+                <a href="./html-css/ex-1/solution-1.html" target="_blank">Link</a>
+              </td>
+              <td>
+                <p class="exercise-description">Golden Layout Table</p>
+                <a href="./html-css/ex-1/solution-2.html" target="_blank">Link</a>
+              </td>
+              <td>
+                <p class="exercise-description"> Additions on top of Level 2  </p>
+                <a href="./html-css/ex-1/solution-3.html" target="_blank">Link</a>
+              </td>
+              <td class="notes"><a href="./html-css/ex-1/notes.html" target="_blank">Notes</a></td>
+            </tr>
+            <tr>
+              <td>Exercise 2</td>
+              <td>
+                <p class="exercise-description">CSS Variables</p>
+                <a href="./html-css/ex-2/solution-1.html" target="_blank">Link</a>
+              </td>
+              <td>
+                <p class="exercise-description">Default Values of Variables and using nth-child</p>
+                <a href="./html-css/ex-2/solution-2.html" target="_blank">Link</a>
+              </td>
+              <td>
+                <p class="exercise-description">Variables to hold other variables and Theme switcher</p>
+                <a href="./html-css/ex-2/solution-3.html" target="_blank">Link</a>
+              </td>
+              <td class="notes"><a href="./html-css/ex-2/notes.html" target="_blank">Notes</a></td>
+            </tr>
+            <tr>
+              <td>Exercise 3</td>
+              <td>
+                <p class="exercise-description">Blog post using Classless CSS</p>
+                <a href="./html-css/ex-3/solution-1.html" target="_blank">Link</a>
+              </td>
+              <td>
+                <p class="exercise-description">Adding element and styling them</p>
+                <a href="./html-css/ex-3/solution-2.html" target="_blank">Link</a>
+              </td>
+              <td>
+                <p class="exercise-description">Using a classless CSS Framework (pure.css)</p>
+                <a href="./html-css/ex-3/solution-3.html" target="_blank">Link</a>
+              </td>
+              <td class="notes"><a href="./html-css/ex-3/notes.html" target="_blank">Notes</a></td>
+            </tr>
+            <tr>
+              <td>Exercise 4</td>
+              <td>
+                <p class="exercise-description">Centered Webpage using vh and vw</p>
+                <a href="./html-css/ex-4/solution-1.html" target="_blank">Link</a>
+              </td>
+              <td>
+                <p class="exercise-description">min(), max(), and clamp()</p>
+                <a href="./html-css/ex-4/solution-2.html" target="_blank">Link</a>
+              </td>
+              <td>
+                <p class="exercise-description">Flexible grids and fluid typography</p>
+                <a href="./html-css/ex-4/solution-3.html" target="_blank">Link</a>
+              </td>
+              <td class="notes"><a href="./html-css/ex-4/notes.html" target="_blank">Notes</a></td>
+            </tr>
+            <tr>
+              <td>Exercise 5</td>
+              <td>
+                <p class="exercise-description">Golden layout (with styling and grids this time)</p>
+                <a href="./html-css/ex-5/solution-1.html" target="_blank">Link</a>
+              </td>
+              <td>
+                <p class="exercise-description">Golden layout with Grid properties and overflow content</p>
+                <a href="./html-css/ex-5/solution-2.html" target="_blank">Link</a>
+              </td>
+              <td>
+                <p class="exercise-description">Golden layout with minmax and responsive layout</p>
+                <a href="./html-css/ex-5/solution-3.html" target="_blank">Link</a>
+              </td>
+              <td class="notes"><a href="./html-css/ex-5/notes.html" target="_blank">Notes</a></td>
+            </tr>
+            <tr>
+              <td>Exercise 6</td>
+              <td>
+                <p class="exercise-description">
+                  Reading different blogs and newsletters 
+                </p>
+              
+                <a href="./html-css/ex-6/solution.html" target="_blank">Link</a>
+              </td>
+              <td class="notes"><a href="./html-css/ex-6/notes.html" target="_blank">Notes</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
 
-    <h2 style="text-align: center; margin-bottom: 20px;">Design Exercises</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Exercise</th>
-          <th>Solution 1</th>
-          <th>Solution 2</th>
-          <th>Solution 3</th>
-          <th>Notes</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Exercise 2-1</td>
-          <td>
-            <p class="exercise-description">Intro to Design Principles</p>
-            <a href="./design/ex-2-1/solution-1.html" target="_blank">Solution 1</a>
-          </td>
-          <td>
-            <p class="exercise-description">Additional Design Technique</p>
-            <a href="./design/ex-2-1/solution-2.html" target="_blank">Solution 2</a>
-          </td>
-          <td>
-            <p class="exercise-description">Further Design Exploration</p>
-            <a href="./design/ex-2-1/solution-3.html" target="_blank">Solution 3</a>
-          </td>
-          <td class="notes"><a href="./design/ex-2-1/notes.html" target="_blank">Notes</a></td>
-        </tr>
-        <tr>
-          <td>Exercise 2-2</td>
-          <td>
-            <p class="exercise-description">Solution 1 Variations</p>
-            <a href="./design/ex-2-2/solution-1-1.html" target="_blank">Solution 1-1</a>
-            <a href="./design/ex-2-2/solution-1-2.html" target="_blank">Solution 1-2</a>
-            <a href="./design/ex-2-2/solution-1-3.html" target="_blank">Solution 1-3</a>
-          </td>
-          <td>
-            <p class="exercise-description">Theme Variations</p>
-            <a href="./design/ex-2-2/solution-2-2-light.html" target="_blank">Light Theme</a>
-            <a href="./design/ex-2-2/solution-2-2-dark.html" target="_blank">Dark Theme</a>
-          </td>
-          <td>
-            <p class="exercise-description">Additional Design Techniques</p>
-            <a href="./design/ex-2-2/solution-3.html" target="_blank">Solution 3</a>
-          </td>
-          <td class="notes"><a href="./design/ex-2-2/notes.html" target="_blank">Notes</a></td>
-        </tr>
-        <tr>
-          <td>Exercise 2-3</td>
-          <td>
-            <p class="exercise-description">Design Solution 1</p>
-            <a href="./design/ex-2-3/solution-1.html" target="_blank">Solution 1</a>
-          </td>
-          <td>
-            <p class="exercise-description">Design Solution 2</p>
-            <a href="./design/ex-2-3/solution-2.html" target="_blank">Solution 2</a>
-          </td>
-          <td>
-            <p class="exercise-description">Design Solution 3</p>
-            <a href="./design/ex-2-3/solution-3.html" target="_blank">Solution 3</a>
-          </td>
-          <td class="notes"><a href="./design/ex-2-3/notes.html" target="_blank">Notes</a></td>
-        </tr>
-        <tr>
-          <td>Exercise 2-4</td>
-          <td>
-            <p class="exercise-description">Image Gallery Design</p>
-            <a href="./design/ex-2-4/solution-1.html" target="_blank">Solution 1</a>
-          </td>
-          <td>
-            <p class="exercise-description">Advanced Gallery Layout</p>
-            <a href="./design/ex-2-4/solution-2.html" target="_blank">Solution 2</a>
-          </td>
-          <td>
-            <p class="exercise-description">Responsive Gallery Techniques</p>
-            <a href="./design/ex-2-4/solution-3.html" target="_blank">Solution 3</a>
-          </td>
-          <td class="notes"><a href="./design/ex-2-4/notes.html" target="_blank">Notes</a></td>
-        </tr>
-        <tr>
-          <td>Exercise 2-5</td>
-          <td>
-            <p class="exercise-description">Image Composition</p>
-            <a href="./design/ex-2-5/solution-1.html" target="_blank">Solution 1</a>
-          </td>
-          <td>
-            <p class="exercise-description">Advanced Composition</p>
-            <a href="./design/ex-2-5/solution-2.html" target="_blank">Solution 2</a>
-          </td>
-          <td>
-            <p class="exercise-description">Composition Notes</p>
-            <td class="notes"></td>
-          </td>
-          <td class="notes"><a href="./design/ex-2-5/notes.html" target="_blank">Notes</a></td>
-        </tr>
-        <tr>
-          <td>Exercise 2-6</td>
-          <td>
-            <p class="exercise-description">Design Solution 1</p>
-            <a href="./design/ex-2-6/solution-1.html" target="_blank">Solution 1</a>
-          </td>
-          <td>
-            <p class="exercise-description">Multiple Layout Variations</p>
-            <a href="./design/ex-2-6/solution-2-1.html" target="_blank">Solution 2-1</a>
-            <a href="./design/ex-2-6/solution-2-2.html" target="_blank">Solution 2-2</a>
-          </td>
-          <td>
-            <p class="exercise-description">Advanced Design Techniques</p>
-            <a href="./design/ex-2-6/solution-3-1.html" target="_blank">Solution 3-1</a>
-            <a href="./design/ex-2-6/solution-3-2.html" target="_blank">Solution 3-2</a>
-          </td>
-          <td class="notes"><a href="./design/ex-2-6/notes.html" target="_blank">Notes</a></td>
-        </tr>
-      </tbody>
-    </table>
+      <section class="section-card">
+        <h2>Design Exercises</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Exercise</th>
+              <th>Solution 1</th>
+              <th>Solution 2</th>
+              <th>Solution 3</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Exercise 2-1</td>
+              <td>
+                <p class="exercise-description">Intro to Design Principles</p>
+                <a href="./design/ex-2-1/solution-1.html" target="_blank">Solution 1</a>
+              </td>
+              <td>
+                <p class="exercise-description">Additional Design Technique</p>
+                <a href="./design/ex-2-1/solution-2.html" target="_blank">Solution 2</a>
+              </td>
+              <td>
+                <p class="exercise-description">Further Design Exploration</p>
+                <a href="./design/ex-2-1/solution-3.html" target="_blank">Solution 3</a>
+              </td>
+              <td class="notes"><a href="./design/ex-2-1/notes.html" target="_blank">Notes</a></td>
+            </tr>
+            <tr>
+              <td>Exercise 2-2</td>
+              <td>
+                <p class="exercise-description">Solution 1 Variations</p>
+                <a href="./design/ex-2-2/solution-1-1.html" target="_blank">Solution 1-1</a>
+                <a href="./design/ex-2-2/solution-1-2.html" target="_blank">Solution 1-2</a>
+                <a href="./design/ex-2-2/solution-1-3.html" target="_blank">Solution 1-3</a>
+              </td>
+              <td>
+                <p class="exercise-description">Theme Variations</p>
+                <a href="./design/ex-2-2/solution-2-2-light.html" target="_blank">Light Theme</a>
+                <a href="./design/ex-2-2/solution-2-2-dark.html" target="_blank">Dark Theme</a>
+              </td>
+              <td>
+                <p class="exercise-description">Additional Design Techniques</p>
+                <a href="./design/ex-2-2/solution-3.html" target="_blank">Solution 3</a>
+              </td>
+              <td class="notes"><a href="./design/ex-2-2/notes.html" target="_blank">Notes</a></td>
+            </tr>
+            <tr>
+              <td>Exercise 2-3</td>
+              <td>
+                <p class="exercise-description">Design Solution 1</p>
+                <a href="./design/ex-2-3/solution-1.html" target="_blank">Solution 1</a>
+              </td>
+              <td>
+                <p class="exercise-description">Design Solution 2</p>
+                <a href="./design/ex-2-3/solution-2.html" target="_blank">Solution 2</a>
+              </td>
+              <td>
+                <p class="exercise-description">Design Solution 3</p>
+                <a href="./design/ex-2-3/solution-3.html" target="_blank">Solution 3</a>
+              </td>
+              <td class="notes"><a href="./design/ex-2-3/notes.html" target="_blank">Notes</a></td>
+            </tr>
+            <tr>
+              <td>Exercise 2-4</td>
+              <td>
+                <p class="exercise-description">Image Gallery Design</p>
+                <a href="./design/ex-2-4/solution-1.html" target="_blank">Solution 1</a>
+              </td>
+              <td>
+                <p class="exercise-description">Advanced Gallery Layout</p>
+                <a href="./design/ex-2-4/solution-2.html" target="_blank">Solution 2</a>
+              </td>
+              <td>
+                <p class="exercise-description">Responsive Gallery Techniques</p>
+                <a href="./design/ex-2-4/solution-3.html" target="_blank">Solution 3</a>
+              </td>
+              <td class="notes"><a href="./design/ex-2-4/notes.html" target="_blank">Notes</a></td>
+            </tr>
+            <tr>
+              <td>Exercise 2-5</td>
+              <td>
+                <p class="exercise-description">Image Composition</p>
+                <a href="./design/ex-2-5/solution-1.html" target="_blank">Solution 1</a>
+              </td>
+              <td>
+                <p class="exercise-description">Advanced Composition</p>
+                <a href="./design/ex-2-5/solution-2.html" target="_blank">Solution 2</a>
+              </td>
+              <td>
+                <p class="exercise-description">Composition Notes</p>
+                <td class="notes"></td>
+              </td>
+              <td class="notes"><a href="./design/ex-2-5/notes.html" target="_blank">Notes</a></td>
+            </tr>
+            <tr>
+              <td>Exercise 2-6</td>
+              <td>
+                <p class="exercise-description">Design Solution 1</p>
+                <a href="./design/ex-2-6/solution-1.html" target="_blank">Solution 1</a>
+              </td>
+              <td>
+                <p class="exercise-description">Multiple Layout Variations</p>
+                <a href="./design/ex-2-6/solution-2-1.html" target="_blank">Solution 2-1</a>
+                <a href="./design/ex-2-6/solution-2-2.html" target="_blank">Solution 2-2</a>
+              </td>
+              <td>
+                <p class="exercise-description">Advanced Design Techniques</p>
+                <a href="./design/ex-2-6/solution-3-1.html" target="_blank">Solution 3-1</a>
+                <a href="./design/ex-2-6/solution-3-2.html" target="_blank">Solution 3-2</a>
+              </td>
+              <td class="notes"><a href="./design/ex-2-6/notes.html" target="_blank">Notes</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
   </body>
 </html>
