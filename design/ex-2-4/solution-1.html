@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegant Image Gallery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f8fa;
+            color: #17672F;
+            line-height: 1.6;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, #CDEFEA 0%, #bff3eb 100%);
+            color: #17672F;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin-bottom: 1rem;
+            font-weight: 500;
+            font-size: 3.5rem;
+        }
+
+        .subtitle {
+            color: #17672F;
+            font-size: 1.1rem;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 1rem;
+        }
+
+        .image-card {
+            background: white;
+            padding: 1rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .image-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .image-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .image-title {
+            font-size: 1.2rem;
+            color: #34495e;
+            margin-bottom: 0.5rem;
+        }
+
+        .image-description {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Elegant Image Gallery</h1>
+            <p class="subtitle">A showcase of beautiful photography</p>
+        </header>
+
+        <div class="gallery">
+            <div class="image-card">
+                <img src="img1.jpeg" alt="Nature landscape">
+                <h3 class="image-title">Natural Beauty</h3>
+                <p class="image-description">Capturing the essence of untouched wilderness</p>
+            </div>
+
+            <div class="image-card">
+                <img src="img2.jpeg" alt="Urban architecture">
+                <h3 class="image-title">Urban Perspectives</h3>
+                <p class="image-description">Modern architecture in the heart of the city</p>
+            </div>
+
+            <div class="image-card">
+                <img src="img3.jpeg" alt="Abstract art">
+                <h3 class="image-title">Abstract Visions</h3>
+                <p class="image-description">Where imagination meets reality</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

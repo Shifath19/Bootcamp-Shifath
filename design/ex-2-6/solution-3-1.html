@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Railways - Book Your Journey</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f6;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header Styles */
+        .header {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #1a5f7a;
+        }
+
+        .logo img {
+            width: 50px;
+            margin-right: 10px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #1a5f7a;
+        }
+
+        /* Booking Section */
+        .booking-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 2rem;
+        }
+
+        .booking-title {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: #1a5f7a;
+        }
+
+        .booking-form {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            margin-bottom: 0.5rem;
+            color: #555;
+        }
+
+        .form-group input,
+        .form-group select {
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .passengers-control {
+            display: flex;
+            align-items: center;
+            margin-top: 1.5rem;
+        }
+
+        .passengers-control label {
+            margin-right: 1rem;
+        }
+
+        .passengers-count {
+            display: flex;
+            align-items: center;
+        }
+
+        .passengers-count button {
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+        }
+
+        .passengers-count input {
+            width: 50px;
+            text-align: center;
+            border: 1px solid #ddd;
+            padding: 0.5rem;
+        }
+
+        .search-btn {
+            grid-column: span 3;
+            background-color: #1a5f7a;
+            color: white;
+            border: none;
+            padding: 1rem;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .search-btn:hover {
+            background-color: #14475e;
+        }
+
+        /* Popular Routes */
+        .popular-routes {
+            max-width: 1000px;
+            margin: 2rem auto;
+        }
+
+        .popular-routes-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        .route-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: transform 0.3s ease;
+        }
+
+        .route-card:hover {
+            transform: scale(1.03);
+        }
+
+        .route-details h4 {
+            color: #1a5f7a;
+            margin-bottom: 0.5rem;
+        }
+
+        .route-details p {
+            color: #666;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: white;
+            color: #666;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .booking-form,
+            .popular-routes-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .nav-links {
+                margin-top: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            🚂 Indian Railways
+        </div>
+        <nav class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">My Bookings</a>
+            <a href="#">Profile</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="booking-container">
+            <h2 class="booking-title">Book Your Journey</h2>
+            <form class="booking-form">
+                <div class="form-group">
+                    <label>From Station</label>
+                    <input type="text" placeholder="Departure Station" required>
+                </div>
+                <div class="form-group">
+                    <label>To Station</label>
+                    <input type="text" placeholder="Arrival Station" required>
+                </div>
+                <div class="form-group">
+                    <label>Date of Travel</label>
+                    <input type="date" required>
+                </div>
+                <div class="passengers-control">
+                    <label>Passengers:</label>
+                    <div class="passengers-count">
+                        <button type="button">-</button>
+                        <input type="number" value="1" min="1" max="6">
+                        <button type="button">+</button>
+                    </div>
+                </div>
+                <button type="submit" class="search-btn">Search Trains</button>
+            </form>
+        </section>
+
+        <section class="popular-routes">
+            <h3 class="booking-title">Popular Routes</h3>
+            <div class="popular-routes-grid">
+                <div class="route-card">
+                    <div class="route-details">
+                        <h4>Mumbai - Delhi</h4>
+                        <p>15 trains available</p>
+                    </div>
+                    🚉
+                </div>
+                <div class="route-card">
+                    <div class="route-details">
+                        <h4>Kolkata - Chennai</h4>
+                        <p>8 trains available</p>
+                    </div>
+                    🚉
+                </div>
+                <div class="route-card">
+                    <div class="route-details">
+                        <h4>Delhi - Bangalore</h4>
+                        <p>12 trains available</p>
+                    </div>
+                    🚉
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        © 2024 Indian Railways - Booking Platform
+    </footer>
+
+    <script>
+        // Simple JavaScript for passenger count control
+        const minusBtn = document.querySelector('.passengers-count button:first-child');
+        const plusBtn = document.querySelector('.passengers-count button:last-child');
+        const passengerInput = document.querySelector('.passengers-count input');
+
+        minusBtn.addEventListener('click', () => {
+            let currentValue = parseInt(passengerInput.value);
+            if (currentValue > 1) {
+                passengerInput.value = currentValue - 1;
+            }
+        });
+
+        plusBtn.addEventListener('click', () => {
+            let currentValue = parseInt(passengerInput.value);
+            if (currentValue < 6) {
+                passengerInput.value = currentValue + 1;
+            }
+        });
+    </script>
+</body>
+</html>

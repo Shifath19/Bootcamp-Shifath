@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>State Government Websites Comparison</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f6f9;
+            color: #333;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .header {
+            background-color: #3498db;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .header h1 {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            padding: 2rem;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-h2 {
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .badge-design {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .badge {
+            background-color: #e9ecef;
+            color: #495057;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+
+        .feature-list {
+            list-style-type: none;
+        }
+
+        .feature-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f1f3f5;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .feature-list li:before {
+            content: '•';
+            color: #3498db;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+
+        .comparison-section {
+            padding: 2rem;
+            background-color: #f8f9fa;
+        }
+
+        .comparison-section .grid {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            padding: 1rem;
+            background-color: #2ecc71;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #27ae60;
+        }
+
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>State Government Websites Comparison</h1>
+            <p>Telangana vs Michigan - A Detailed Analysis</p>
+        </div>
+        <div class="grid">
+            <div class="card">
+                <div class="card-h2"><h2>Telangana Portal</h2></div>
+                
+                <div class="badge-design">
+                    <div class="badge">Digital Innovation</div>
+                    <div class="badge">Cultural Focus</div>
+                </div>
+                
+                <h3>Service Offerings</h3>
+                <ul class="feature-list">
+                    <li>Mee Seva Portal: A comprehensive digital platform providing seamless citizen services with user-friendly interfaces</li>
+                    <li>Advanced Payment Systems: Secure, integrated payment gateways for multiple government services</li>
+                    <li>Mobile-First Digital Services: Optimized digital experiences designed primarily for mobile users</li>
+                    <li>Multilingual Support: Inclusive language options catering to diverse linguistic populations</li>
+                    <li>Cultural Integration: Incorporating local cultural elements into digital governance</li>
+                </ul>
+                <h3>Design Elements</h3>
+                <ul class="feature-list">
+                    <li>Modern, Intuitive Interface: Clean design with focus on user experience</li>
+                    <li>Rich Media Content: Engaging visual storytelling and informative graphics</li>
+                    <li>Strong Regional Identity: Design that reflects local aesthetic and cultural nuances</li>
+                    <li>Responsive Mobile Design: Seamless experience across various device types</li>
+                </ul>
+            </div>
+            <div class="card">
+                <div class="card-h2"><h2>Michigan Portal</h2></div>
+                
+                <div class="badge-design">
+                    <div class="badge">Efficiency</div>
+                    <div class="badge">Accessibility</div>
+                </div>
+                
+                <h3>Service Offerings</h3>
+                <ul class="feature-list">
+                    <li>DMV Services: Streamlined, efficient digital vehicle and license management</li>
+                    <li>Business Licensing Portal: Comprehensive platform for business registration and licensing</li>
+                    <li>Integrated Health Services: Centralized digital healthcare service information and access</li>
+                    <li>Federal Services Connection: Seamless integration with federal government platforms</li>
+                    <li>Department-Specific Categorization: Clear, logical service organization</li>
+                </ul>
+                <h3>Design Elements</h3>
+                <ul class="feature-list">
+                    <li>Minimalist Design Philosophy: Clean, uncluttered user interfaces</li>
+                    <li>Performance-Optimized Pages: Ultra-fast loading and smooth navigation</li>
+                    <li>Robust Accessibility Standards: Inclusive design for users with diverse abilities</li>
+                    <li>Consistent Branding: Unified visual identity across all digital touchpoints</li>
+                </ul>
+            </div>
+        </div>
+        <div class="comparison-section">
+            <div class="card"> 
+                <div class="card-h2">
+                    <h2>Key Differentiators</h2>
+                </div>
+               
+                <div class="grid">
+                    <div>
+                        <h3>Telangana Strengths</h3>
+                        <ul class="feature-list">
+                            <li>Pioneering Digital Innovation Leadership</li>
+                            <li>Deep Cultural Integration in Digital Governance</li>
+                            <li>Radical Mobile-First Digital Strategy</li>
+                            <li>Advanced Integrated Payment Ecosystems</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Michigan Strengths</h3>
+                        <ul class="feature-list">
+                            <li>Consistent, Predictable User Experience</li>
+                            <li>Rigorous Performance and Speed Optimization</li>
+                            <li>Intuitive Service Discovery Mechanisms</li>
+                            <li>Comprehensive Digital Accessibility Compliance</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
