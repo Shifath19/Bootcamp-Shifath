@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Level 1: Font Weights Explained</title>
+    <style>
+      :root {
+            --base-color-50: #f0f4f8;   /* Lightest */
+            --base-color-100: #d9e2ef;
+            --base-color-200: #bcccdc;
+            --base-color-300: #9fb3c8;
+            --base-color-400: #829ab1;
+            --base-color-500: #627d98;   /* Base color */
+            --base-color-600: #486581;
+            --base-color-700: #334e68;
+            --base-color-800: #243b53;
+            --base-color-900: #102a43;   /* Darkest */
+            
+            --text-primary: var(--base-color-900);
+            --text-secondary: var(--base-color-700);
+            --background-primary: var(--base-color-50);
+            --background-secondary: var(--base-color-100);
+        }
+
+      
+        /* Color Theory Card Styles */
+        .color-theory-card {
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 1px solid var(--base-color-200);
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(98, 125, 152, 0.15);
+            padding: 25px;
+            max-width: 800px;
+            margin: 30px auto;
+            transition: all 0.3s ease;
+        }
+
+        .color-theory-card:hover {
+            box-shadow: 0 15px 35px rgba(98, 125, 152, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .color-theory-card h2 {
+            color: var(--base-color-800);
+            border-bottom: 2px solid var(--base-color-200);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .color-rule {
+            background-color: var(--base-color-100);
+            border-left: 4px solid var(--base-color-500);
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+
+        .color-rule h3 {
+            color: var(--base-color-700);
+            margin-top: 0;
+        }
+
+        .color-code {
+            background-color: var(--base-color-200);
+            font-family: 'Courier New', monospace;
+            padding: 10px;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+            width: 100vw;
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            background-color: var(--background-primary);
+            color: var(--text-primary);
+            
+            padding: 20px;
+          
+        }
+
+        .light-text {
+            font-weight: 300;
+            background-color: #e6f3ff;
+            padding: 10px;
+            border-left: 4px solid #3498db;
+        }
+
+        .normal-text {
+            font-weight: 400;
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-left: 4px solid #2ecc71;
+        }
+
+        .bold-text {
+            font-weight: 700;
+            background-color: #fff0e6;
+            padding: 10px;
+            border-left: 4px solid #e74c3c;
+        }
+
+        h1 {
+            font-family: 'Times New Roman', serif;
+            text-align: center;
+            color: #333;
+        }
+
+        .weight-guide {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .weight-box {
+            text-align: center;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        code {
+            font-family: 'Courier New', monospace;
+            background-color: #e0e0e0;
+            padding: 2px 4px;
+        }
+        .th{
+          font-weight: 300;
+        }
+        .fo{
+          font-weight: 400;
+        }
+        .se{
+          font-weight: 700;
+        }
+        
+        .drop-cap::first-letter {
+            font-size: 3em;
+            float: left;
+            margin-right: 0.1em;
+            margin-top: 0.1em;
+            font-weight: bold;
+            color: #1a5f7a;
+            line-height: 0.8;
+        }
+
+        .text-shadow {
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+            color: #2c3e50;
+        }
+
+        .text-clip {
+            background-image:url('./img.jpg');
+            background-position: center;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            font-size: 4rem;
+            font-weight: bold;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .variable-font-demo {
+            transition: all 0.3s ease;
+            display: inline-block;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .variable-font-demo.active {
+            font-weight: 700;
+            color: #e74c3c;
+            transform: scale(1.05);
+        }
+        @font-face {
+            font-family: 'Geist';
+            src: url('https://cdn.vercel.com/fonts/geist/geist-regular.woff2') format('woff2'),
+                 url('https://cdn.vercel.com/fonts/geist/geist-regular.woff') format('woff');
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Geist';
+            src: url('https://cdn.vercel.com/fonts/geist/geist-bold.woff2') format('woff2'),
+                 url('https://cdn.vercel.com/fonts/geist/geist-bold.woff') format('woff');
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        .level3{
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        h1, h2 {
+            font-family: 'Geist', sans-serif;
+            letter-spacing: -0.05em;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            color: #1a1a2e;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 400;
+            color: #4a4a68;
+        }
+
+        .intro {
+            font-size: 1.2rem;
+            font-weight: 300;
+            font-style: italic;
+            color: #666;
+        }
+
+        .code-section {
+            font-family: 'Courier New', monospace;
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            line-height: 1.6;
+        }
+
+        .spacing-demo {
+            letter-spacing: 0.1em;
+            word-spacing: 0.3em;
+            color: #2c3e50;
+        }
+
+        .line-height-demo {
+            line-height: 2.5;
+            color: #34495e;
+        }
+        :root {
+            --base-color-50: #f0f4f8;   /* Lightest */
+            --base-color-100: #d9e2ef;
+            --base-color-200: #bcccdc;
+            --base-color-300: #9fb3c8;
+            --base-color-400: #829ab1;
+            --base-color-500: #627d98;   /* Base color */
+            --base-color-600: #486581;
+            --base-color-700: #334e68;
+            --base-color-800: #243b53;
+            --base-color-900: #102a43;   /* Darkest */
+            
+            --text-primary: var(--base-color-900);
+            --text-secondary: var(--base-color-700);
+            --background-primary: var(--base-color-50);
+            --background-secondary: var(--base-color-100);
+        }
+
+      
+        /* Color Theory Card Styles */
+        .color-theory-card {
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 1px solid var(--base-color-200);
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(98, 125, 152, 0.15);
+            padding: 25px;
+            max-width: 800px;
+            margin: 30px auto;
+            transition: all 0.3s ease;
+        }
+
+        .color-theory-card:hover {
+            box-shadow: 0 15px 35px rgba(98, 125, 152, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .color-theory-card h2 {
+            color: var(--base-color-800);
+            border-bottom: 2px solid var(--base-color-200);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .color-rule {
+            background-color: var(--base-color-100);
+            border-left: 4px solid var(--base-color-500);
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+
+        .color-rule h3 {
+            color: var(--base-color-700);
+            margin-top: 0;
+        }
+
+        .color-code {
+            background-color: var(--base-color-200);
+            font-family: 'Courier New', monospace;
+            padding: 10px;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <p style="background-color: rgb(213, 208, 208); padding: 20px 20px; border-radius: 10px;">Level 3:
+      Install a custom font locally and use it in the page. You can get this Geist font from vercel. <br>
+  Combine multiple font families to create a typographic hierarchy (e.g., headers vs. body text). <br> Download them on the web and use them in your page. <br>
+  Adjust the font height, spacing etc. Illustrate in on the same page. <br> Add more paragraphs if needed with information on what we are looking at.</p>
+  
+  
+    <h1>Exercise 1: Basics of Fonts solution 3</h1>
+    
+    <div class="weight-guide">
+        <div class="weight-box th">
+            <h3>Light Weight (300)</h3>
+            <p>Thin, delicate text</p>
+        </div>
+        <div class="weight-box fo">
+            <h3>Normal Weight (400)</h3>
+            <p>Standard body text</p>
+        </div>
+        <div class="weight-box se">
+            <h3>Bold Weight (700)</h3>
+            <p>Strong, emphasized text</p>
+        </div>
+    </div>
+    
+    <h2>Font Weight Exploration</h2>
+    
+    <p class="light-text">
+        <strong>Light Weight (300):</strong> This text demonstrates the lightest font weight available in Arial. 
+        Notice how it appears thinner and more delicate. Light weights are excellent for minimal 
+        designs, subtle information, or when you want to create a sense of elegance and airiness. 
+        It's particularly effective for supporting text or when you want to reduce visual noise.
+    </p>
+    
+    <p class="normal-text">
+        <strong>Normal Weight (400):</strong> This is the standard font weight used in most body text. 
+        It strikes a perfect balance between readability and visual clarity. Normal weight 
+        ensures that text is neither too thin to strain the eyes nor too bold to appear aggressive. 
+        Most paragraphs, articles, and standard content use this weight as their default.
+    </p>
+    
+    <p class="bold-text">
+        <strong>Bold Weight (700):</strong> Bold text commands attention and emphasis. When you want 
+        to highlight key information, draw the reader's eye, or create a strong visual hierarchy, 
+        bold weight is your go-to choice. It makes text appear more substantial and powerful, 
+        perfect for headings, important statements, or areas requiring immediate focus.
+    </p>
+
+    <h2>Understanding Font Weights</h2>
+    <p>Font weights range from thin (100) to extra bold (900). The three primary weights we're 
+       exploring today are:</p>
+    <ul>
+        <li class="th">300 (Light): Delicate and minimal</li>
+        <li class="fo">400 (Normal): Standard readability</li>
+        <li class="se">700 (Bold): Strong emphasis</li>
+    </ul>
+
+    <h2>JavaScript Snippet: Weight Exploration</h2>
+    <pre><code>
+// Demonstrating font weight characteristics
+function exploreFontWeights() {
+    const weights = [
+        { value: 300, description: 'Light - Delicate text' },
+        { value: 400, description: 'Normal - Standard text' },
+        { value: 700, description: 'Bold - Emphasized text' }
+    ];
+    
+    weights.forEach(weight => {
+        console.log(`Font Weight: ${weight.value} - ${weight.description}`);
+    });
+}
+
+exploreFontWeights();
+    </code></pre>
+
+    
+<h1>Typography: Beyond Simple Text</h1>
+
+<h2>The Magic of the Drop Cap</h2>
+<p class="drop-cap">
+    Typography is an art form that transforms mere words into visual poetry. A drop cap, 
+    the enlarged first letter of a paragraph, creates an immediate visual anchor, drawing 
+    the reader's eye and adding a touch of elegance to the text. This technique, rooted in 
+    medieval manuscript design, continues to captivate readers in modern digital typography.
+</p>
+
+<h2>Text Shadows: Adding Depth and Dimension</h2>
+<p class="text-shadow">
+    Shadows are not just for images—they can breathe life into text itself. By carefully 
+    applying text shadows, we can create depth, add drama, and make words leap off the page. 
+    The subtle interplay of light and shadow transforms flat text into a three-dimensional 
+    typographic experience.
+</p>
+
+<h2>Image Masking: Text as a Window</h2>
+<div class="text-clip">
+    Typography Magic
+</div>
+<p>
+    In this technique, an image is revealed only through the shapes of letters. The text 
+    becomes a unique window, allowing the background image to peek through its letterforms. 
+    This creates a dynamic, interactive visual experience that blurs the line between text 
+    and imagery.
+</p>
+
+<h2>Variable Fonts: Dynamic Typography</h2>
+<p>
+    <span class="variable-font-demo" onclick="toggleVariableFont(this)">
+        Click to transform: Explore the magic of dynamic typography
+    </span>
+</p>
+
+<h2>Font Family Showcase</h2>
+<ul>
+    <li style="font-family: 'Roboto';">Sans-serif body text: Roboto - Clean and modern</li>
+    <li style="font-family: Arial, Helvetica, sans-serif;">Serif headings: Merriweather - Traditional and elegant</li>
+    <li>Monospace code: Fira Mono - Precise and technical</li>
+</ul>
+
+<script>
+    function toggleVariableFont(element) {
+        element.classList.toggle('active');
+    }
+</script>
+
+<div class="level3">
+  <h1>The Intricate World of Typography</h1>
+
+    <p class="intro">
+        Typography is more than just selecting fonts—it's about creating a visual language 
+        that communicates beyond words. Each font, each spacing adjustment, tells a story 
+        of design, readability, and aesthetic intention.
+    </p>
+
+    <h2>Font Family Dialogue</h2>
+    <p>
+        In this exploration, we've paired Geist from Vercel—a modern, clean typeface—with 
+        Open Sans, a highly readable sans-serif font. This combination demonstrates how 
+        different font families can work together to create a harmonious and engaging 
+        typographic landscape.
+    </p>
+
+    <h2>The Symphony of Letter Spacing</h2>
+    <p class="spacing-demo">
+        Letter spacing transforms text from a mere communication tool to a visual art form. 
+        By expanding or condensing the space between letters and words, we can create 
+        rhythm, emphasis, and emotional resonance in our typography.
+    </p>
+
+    <h2>Breathing Room: Line Height Exploration</h2>
+    <p class="line-height-demo">
+        Line height is the unsung hero of readability. Too compact, and text feels claustrophobic; 
+        too expansive, and it loses connection. The right line height creates a rhythmic 
+        flow, guiding the reader's eye and making long-form content a pleasure to consume.
+    </p>
+
+    <h2>Code as Typography</h2>
+    <div class="code-section">
+        // Typography is a code of visual communication
+        function exploreTypographicPossibilities() {
+            const fonts = ['Geist', 'Open Sans', 'Courier'];
+            const principles = [
+                'Readability',
+                'Hierarchy',
+                'Emotional Resonance'
+            ];
+            
+            principles.forEach(principle => {
+                console.log(`Exploring typographic principle: ${principle}`);
+            });
+        }
+    </div>
+</div>
+
+<div class="color-theory-card">
+  <h2>🎨 CSS Color Theory: Rules and Best Practices</h2>
+  
+  <div class="color-rule">
+      <h3>1. Color Accessibility</h3>
+      <p>Ensure sufficient color contrast to maintain readability. Use tools like WCAG contrast checkers to verify your color combinations meet accessibility standards.</p>
+      <div class="color-code">
+          /* Good Practice */
+          .text { 
+              color: #333; 
+              background-color: #fff; 
+          }
+      </div>
+  </div>
+  
+  <div class="color-rule">
+      <h3>2. Semantic Color Usage</h3>
+      <p>Utilize CSS custom properties (variables) to create a consistent color system. This allows for easy theme management and global color updates.</p>
+      <div class="color-code">
+          :root {
+              --primary-color: #3498db;
+              --success-color: #2ecc71;
+              --danger-color: #e74c3c;
+          }
+      </div>
+  </div>
+  
+  <div class="color-rule">
+      <h3>3. Color Transparency and Alpha Channels</h3>
+      <p>Leverage rgba() and hsla() for nuanced color interactions. Use alpha channels to create depth, overlay effects, and subtle variations.</p>
+      <div class="color-code">
+          .overlay {
+              background-color: rgba(52, 152, 219, 0.5);
+          }
+      </div>
+  </div>
+  
+  <div class="color-rule">
+      <h3>4. Color Theming with CSS Variables</h3>
+      <p>Create dynamic, adaptable color themes using CSS custom properties. This enables easy dark mode implementation and color scheme switching.</p>
+      <div class="color-code">
+          @media (prefers-color-scheme: dark) {
+              :root {
+                  --bg-color: #121212;
+                  --text-color: #ffffff;
+              }
+          }
+      </div>
+  </div>
+</div>
+</body>
+
+</html>

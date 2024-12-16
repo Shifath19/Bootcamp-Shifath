@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gradient & Color Palette Demo</title>
+  <style>
+    :root {
+      --primary: #3498db;
+      --secondary: #2ecc71;
+      --light-primary: #85c1e9;
+      --dark-primary: #4197d1;
+      --background: #f4f4f4;
+      --text-color: #333;
+    }
+
+    @media (max-width: 968px) {
+      :root {
+        --primary: #e74c3c;
+        --secondary: #f1c40f;
+        --background: #ffffff;
+        --text-color: #222;
+      }
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--background);
+      color: var(--text-color);
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      background: linear-gradient(45deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      color: transparent;
+      font-size: 3.5rem;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 10px;
+      margin: 20px auto;
+      text-align: center;
+      background: radial-gradient(circle, var(--light-primary), var(--primary));
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-weight: bold;
+      box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s ease;
+    }
+
+    .button:hover {
+      transform: scale(1.05);
+    }
+
+    .palette {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin: 20px 0;
+    }
+
+    .swatch {
+      width: 100px;
+      height: 100px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 0.8rem;
+      border-radius: 5px;
+      box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .contrast-demo {
+      margin: 20px 0;
+    }
+
+    .contrast-section {
+      padding: 20px;
+      margin: 10px 0;
+      border: 2px solid var(--text-color);
+      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .good-contrast {
+      background-color: #000;
+      color: #fff;
+      border-radius: 10px;
+    }
+
+    .bad-contrast {
+      background-color: #888;
+      color: #aaa;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>Gradient & Palette Demo</header>
+
+  <section>
+    <h2>Gradient Button</h2>
+    <button class="button">Click Me</button>
+  </section>
+
+  <section>
+    <h2>Responsive Color Palette</h2>
+    <div class="palette">
+      <div class="swatch" style="background-color: var(--primary);">Primary</div>
+      <div class="swatch" style="background-color: var(--secondary);">Secondary</div>
+      <div class="swatch" style="background-color: var(--light-primary);">Light</div>
+      <div class="swatch" style="background-color: var(--dark-primary);">Dark</div>
+    </div>
+  </section>
+
+  <section class="contrast-demo">
+    <h2>Contrast Demonstration</h2>
+    <div class="contrast-section good-contrast">Good Contrast: #000 on #fff</div>
+    <div class="contrast-section bad-contrast">Bad Contrast: #888 on #aaa</div>
+  </section>
+</body>
+</html>

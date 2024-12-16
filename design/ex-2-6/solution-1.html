@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery Page</title>
+    <style>
+            body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+        .hero {
+            background-color: #F8660A;
+            text-align: center;
+            padding: 100px 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            color: white;
+        }
+        .hero h1 {
+            font-size: 4rem;
+            color: white;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            color: white;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            padding: 50px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .gallery-item {
+            text-align: center;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1), 
+                        0 10px 20px rgba(0,0,0,0.08);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15), 
+                        0 15px 25px rgba(0,0,0,0.12);
+        }
+        .image-container {
+            height: 500px;
+            overflow-y: scroll;
+            border-bottom: 1px solid #eee;
+        }
+        .gallery-item img {
+            width: 100%;
+            object-fit: cover;
+        }
+        .gallery-item h2 {
+            margin: 15px 0 10px;
+            font-size: 1.5rem;
+            color: #333;
+        }
+        .gallery-item p {
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto 20px;
+            padding: 0 20px;
+        }
+        /* Custom scrollbar for webkit browsers */
+        .image-container::-webkit-scrollbar {
+            width: 10px;
+        }
+        .image-container::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        .image-container::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+        .image-container::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <h1> Redesign of the websites</h1>
+        <p></p>
+    </section>
+
+    <section class="gallery">
+        <div class="gallery-item">
+          <h2>Indian Government Press Releases </h2>
+          
+            <img src="img1.png" alt="Landscape 1">
+        
+        </div>
+        <div class="gallery-item">
+          <h2> one single press release.
+          </h2>
+            
+            <img src="img2.png" alt="Landscape 2">
+            
+        </div>
+        <div class="gallery-item">
+          <h2>  IITM CSE Faculty site
+            </h2>
+            
+            <img src="img3.png" alt="Landscape 3">
+            
+        </div>
+        <div class="gallery-item">
+          <h2> One single faculty member
+            </h2>
+        
+            <img src="img4.png" alt="Landscape 4">
+          
+        </div>
+        <div class="gallery-item">
+          <h2>IIT B Talk
+            </h2>
+          
+            <img src="img5.png" alt="Landscape 5">
+    
+        </div>
+        <div class="gallery-item">
+          <h2>Indian Railways website</h2>
+          
+            <img src="img6.png" alt="Landscape 6">
+          
+        </div>
+    </section>
+</body>
+</html>
