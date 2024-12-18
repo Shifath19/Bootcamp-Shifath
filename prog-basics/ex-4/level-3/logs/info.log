@@ -1,3 +1,10 @@
 2024-12-18 07:19:30 [info]: Interactive Math Calculator Started 
 2024-12-18 07:19:40 [info]: User input: --add 87 77 
 2024-12-18 07:19:40 [info]: Addition: 87 + 77 = 164 
+2024-12-18 10:27:50 [info]: Interactive Math Calculator Started 
+2024-12-18 10:28:03 [info]: User input: --add 978 87 
+2024-12-18 10:28:03 [info]: Addition: 978 + 87 = 1065 
+2024-12-18 10:28:11 [info]: User input: -- multiply 87 77 
+2024-12-18 10:28:11 [error]: Operation error: Invalid number: multiply 
+2024-12-18 10:28:54 [info]: User input: --multiply 87 77 
+2024-12-18 10:28:54 [info]: Multiplication: 87 * 77 = 6699 

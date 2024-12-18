@@ -5,7 +5,7 @@
   "scripts": {
     "prestart": "if not exist node_modules npm install",
     "start": "node index.js",
-    "dev:all": "cross-env DEBUG=Shifath:* node index.js",
+    "dev": "cross-env DEBUG=Shifath:* node index.js",
     "dev:index": "cross-env DEBUG=Shifath:index node index.js",
     "dev:mathUtils": "cross-env DEBUG=Shifath:mathUtils node index.js",
     "dev:advancedMath": "cross-env DEBUG=Shifath:advancedMath node index.js",
