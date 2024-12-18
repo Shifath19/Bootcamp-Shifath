@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ex-1 lvl-1</title>
+  <title>ex-6</title>
 
   <style>
     *{
@@ -89,7 +89,7 @@
 <body>
   <body>
     <header>
-      <h1>Notes - Programming Basics - Exercise 1</h1>
+      <h1>Notes - Programming Basics - Exercise 6</h1>
       <h5>
         LLMs Used : ChatGpt <br>
         Conversation <a href="https://chatgpt.com/share/67624bf7-78b8-800e-b603-499031e68e4d" target="_blank" rel="noopener noreferrer">link</a>
@@ -101,14 +101,14 @@
       <div class="overview">
         <h3 style="text-align: center">Abstract</h3>
         <p>
-          It was just setup for project.Installed Chalk and nodemon.
+          YAML Configuration (config)
         </p>
       </div>
       <hr />
       <div class="challenges">
         <h3 style="text-align: center">Challenges faced</h3>
         <p>
-          Some of the scripts had issues when used on windows. Used stackoverflow and few youtube tutorials to solve it.
+          The most difficult part was using the configuration to adjust the behavior of the program dynamically. For instance, switching logging levels or loading commands/functions dynamically based on the YAML configuration required thinking about how to decouple the code logic from the configuration. I had to explore dynamic imports and learn how to handle them in a Node.js environment.
         </p>
         <br />
         
@@ -117,50 +117,26 @@
       <div class="resources">
         <h3 style="text-align: center">Resources used</h3>
         <p>
-          I mainly used youtube and stackoverflow. follwed some guides by Hitesh to install and config the scripts.
+          I mainly used youtube and stackoverflow. 
         </p>
         <ol>
-          <li>Stack Overflow</li>
+          <li>Official config Documentation:</li>
           <li> Youtube  Tutorials</li>
+          <li>YAML Syntax Guides:</li>
         </ol>
       </div>
       <hr />
       <div class="improvements">
         <h3 style="text-align: center">Improvements</h3>
         <p>
-          One of the improvements could be using better cross platform scripts
+          One of the improvements I could refactor the program to provide a more centralized configuration management system. Instead of using multiple configuration files and manually switching environments, I could create a function that loads and merges the necessary environment configurations automatically. This would make the code cleaner and more modular.
         </p>
       </div>
     </main>
 
     <section></section>
 
-    <section>
-      <h3>Images</h3>
-
-      <table>
-        <thead>
-          <tr>
-            <th>Level</th>
-            <th>Image</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Level 1</td>
-            <td><img src="./level-1/image.png" alt="Level 1" /></td>
-          </tr>
-          <tr>
-            <td>Level 2</td>
-            <td><img src="./level-2/image.png" alt="Level 2" /></td>
-          </tr>
-          <tr>
-            <td>Level 3</td>
-            <td><img src="./level-3/image.png" alt="Level 3" /></td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
+  
   </body>
 </body>
 </html>
