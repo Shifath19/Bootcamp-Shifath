@@ -1,0 +1,19 @@
+{
+  "name": "env-config-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "if not exist node_modules npm install",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "env-config-app": "file:",
+    "express": "^4.18.2",
+    "winston": "^3.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
