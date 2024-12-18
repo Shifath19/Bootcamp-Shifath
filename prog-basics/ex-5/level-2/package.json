@@ -1,0 +1,22 @@
+{
+  "name": "math-env-config",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "if not exist node_modules npm install",
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "debug": "cross-env DEBUG=Shifath:* node index.js"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "cross-env": "^7.0.3",
+    "debug": "^4.3.4",
+    "dotenv": "^16.3.1",
+    "math-env-config": "file:",
+    "winston": "^3.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

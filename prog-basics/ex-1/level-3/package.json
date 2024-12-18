@@ -1,0 +1,22 @@
+{
+  "name": "level-3",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "if not exist node_modules npm install",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "Shifath",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "level-2": "file:",
+    "level-3": "file:"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}

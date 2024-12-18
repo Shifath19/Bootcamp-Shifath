@@ -1,0 +1,2 @@
+2024-12-18 07:56:53 [INFO]: Application Configuration {"defaultOperation":"multiply","defaultNumbers":[2,3,4,5],"logLevel":"debug","maxNumbers":3,"decimalPlaces":4}
+2024-12-18 07:56:53 [INFO]: Math Operation: multiply {"numbers":[2,3,4],"result":"24.0000"}

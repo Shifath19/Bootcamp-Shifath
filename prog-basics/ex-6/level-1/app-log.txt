@@ -1,0 +1,2 @@
+[32m 2024-12-18T03:19:57.772Z info: Starting the application...[39m
+[32m 2024-12-18T03:19:57.783Z info: [32mOperation completed successfully.[39m[32m[39m

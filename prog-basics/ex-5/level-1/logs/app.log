@@ -1,0 +1,2 @@
+{"level":"info","message":"MyAwesomeApp running on port 4000","timestamp":"2024-12-18T02:19:47.976Z"}
+{"level":"info","message":"Connected to database at mongodb://127.0.0.1:27017","timestamp":"2024-12-18T02:19:47.979Z"}
