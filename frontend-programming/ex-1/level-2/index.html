@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Table Management</title>
+    <style>
+        /* Brutalist Styles */
+        body {
+            font-family: "Arial", sans-serif;
+            margin: 20px;
+            background-color: white;
+            color: black;
+            line-height: 1.6;
+            
+        }
+
+        h1 {
+          text-align: center;
+            font-size: 3rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        /* Buttons */
+        button {
+          border-radius: 8px;
+            background: none;
+            border: 2px solid black;
+            color: black;
+            font-size: 1rem;
+            text-transform: uppercase;
+            padding: 10px 20px;
+            margin-right: 10px;
+            cursor: pointer;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        button:hover {
+            background: black;
+            color: white;
+        }
+
+        /* Table Styles */
+        table {
+            width: 100%;
+            border: 2px solid rgb(48, 47, 47);
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: white;
+            
+            
+        }
+
+        th, td {
+          
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+            text-transform: uppercase;
+            
+        }
+
+        /* Highlighted Row */
+        .highlight {
+            background-color:rgb(171, 215, 192);
+            color: black;
+        }
+
+        /* Browser Info */
+        #browserInfo {
+          border-radius: 7px;
+            margin-top: 20px;
+            border: 2px solid black;
+            padding: 10px;
+            font-family: monospace;
+            background: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h2>Shiafth's</h2>
+    <h1>Student Table Management</h1>
+
+    <button id="loadStudentsBtn">Load Students</button>
+    <button id="changeFontBtn">Change Font</button>
+
+    <!-- Table -->
+    <table id="studentTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Grade</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Table rows will be dynamically added here -->
+        </tbody>
+    </table>
+
+    <!-- Browser Info Section -->
+    <div id="browserInfo"></div>
+
+    <!-- Scripts -->
+    <script type="module" src="script.js"></script>
+</body>
+</html>

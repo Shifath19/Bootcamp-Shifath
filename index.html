@@ -5,162 +5,163 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BootCamp Week 1 - Modern Design</title>
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
       :root {
-        --primary-color: #5084f5;
-        --secondary-color: #2b49ab;
-        --background-color: #f8fafc;
-        --card-background: #ffffff;
-        --text-primary: #1e293b;
-        --text-secondary: #475569;
-        --border-radius: 12px;
-        --transition: all 0.3s ease;
-      }
+  --primary-color: #1a472a;    /* Dark forest green */
+  --background-color: #f5f7f5;  /* Light mint */
+  --card-background: #ffffff;   /* Pure white */
+  --accent-color: #2d5a27;     /* Medium forest green */
+  --secondary-accent: #8fb996;  /* Sage green */
+  --warm-gray: #f0f4f1;        /* Light sage */
+  --text-primary: #1c2826;     /* Dark gray-green */
+  --border-radius: 0px;
+  --transition: all 0.2s ease;
+  --shadow: 8px 8px 0 #1a472a;
+}
 
-      body {
-        font-family: 'Inter', system-ui, -apple-system, sans-serif;
-        background-color: var(--background-color);
-        color: var(--text-primary);
-        padding: 2rem;
-        line-height: 1.6;
-      }
+body {
+  font-family: 'Courier New', monospace;
+  background-color: var(--background-color);
+  color: var(--text-primary);
+  padding: 2rem;
+  line-height: 1.6;
+}
 
-      .container {
-        max-width: 1200px;
-        margin: 0 auto;
-      }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  border: 3px solid var(--primary-color);
+  padding: 2rem;
+  background: var(--card-background);
+}
 
-      h1 {
-        text-align: center;
-        margin-bottom: 2rem;
-        font-size: 2.5rem;
-        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        padding: 1rem;
-      }
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  text-transform: uppercase;
+  padding: 1.5rem;
+  border: 3px solid var(--primary-color);
+  background: var(--warm-gray);
+  letter-spacing: -1px;
+  box-shadow: var(--shadow);
+}
 
-      h2 {
-        text-align: center;
-        margin: 3rem 0 2rem;
-        color: var(--primary-color);
-        font-size: 1.8rem;
-      }
+h2 {
+  text-align: left;
+  margin: 3rem 0 2rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  border-bottom: 3px solid var(--primary-color);
+  padding-bottom: 0.5rem;
+  color: var(--accent-color);
+}
 
-      .section-card {
-        background: var(--card-background);
-        border-radius: var(--border-radius);
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-        padding: 2rem;
-        margin-bottom: 2rem;
-        transition: var(--transition);
-      }
+.section-card {
+  background: var(--card-background);
+  border: 3px solid var(--primary-color);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
 
-      .section-card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-      }
+.section-card:hover {
+  transform: translateX(4px) translateY(4px);
+  box-shadow: 4px 4px 0 var(--accent-color);
+  background: var(--warm-gray);
+}
 
-      table {
-        width: 100%;
-        border-collapse: separate;
-        border-spacing: 0 1rem;
-      }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid var(--primary-color);
+}
 
-      th {
-        background-color: var(--primary-color);
-        color: white;
-        padding: 1rem;
-        text-align: left;
-        font-weight: 600;
-        border-radius: var(--border-radius) var(--border-radius) 0 0;
-      }
+th {
+  background-color: var(--primary-color);
+  color: var(--warm-gray);
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  text-transform: uppercase;
+}
 
-      td {
-        background-color: var(--card-background);
-        padding: 1rem;
-        border-bottom: 2px solid #e2e8f0;
-        transition: var(--transition);
-      }
+td {
+  background-color: var(--card-background);
+  padding: 1rem;
+  border: 2px solid var(--primary-color);
+}
 
-      tr:hover td {
-        background-color: #f1f5f9;
-      }
+tr:hover td {
+  background-color: var(--warm-gray);
+  transform: translateX(2px);
+}
 
-      .exercise-description {
-        font-size: 0.95rem;
-        color: var(--text-secondary);
-        margin-bottom: 0.5rem;
-      }
+.exercise-description {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  font-family: monospace;
+  color: var(--accent-color);
+}
 
-      a {
-        color: var(--primary-color);
-        text-decoration: none;
-        padding: 0.5rem 1rem;
-        border-radius: 6px;
-        display: inline-block;
-        transition: var(--transition);
-        font-weight: 500;
-      }
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--primary-color);
+  display: inline-block;
+  transition: var(--transition);
+  font-weight: bold;
+  background: var(--card-background);
+}
 
-      a:hover {
-        background-color: var(--primary-color);
-        color: white;
-        transform: translateY(-2px);
-      }
+a:hover {
+  background-color: var(--accent-color);
+  color: white;
+  transform: translateX(2px) translateY(2px);
+  box-shadow: none;
+  border-color: var(--accent-color);
+}
 
-      .notes {
-        text-align: center;
-      }
+.notes a {
+  background-color: var(--warm-gray);
+  box-shadow: 4px 4px 0 var(--primary-color);
+}
 
-      .notes a {
-        background-color: #f1f5f9;
-        color: var(--text-secondary);
-      }
+.notes a:hover {
+  background-color: var(--secondary-accent);
+  box-shadow: none;
+}
 
-      .notes a:hover {
-        background-color: var(--primary-color);
-        color: white;
-      }
+td a + a {
+  margin-left: 0.5rem;
+}
 
-      /* Multiple links in a cell */
-      td a + a {
-        margin-left: 0.5rem;
-      }
-
-      /* Responsive design */
-      @media (max-width: 768px) {
-        body {
-          padding: 1rem;
-        }
-
-        .section-card {
-          padding: 1rem;
-          overflow-x: auto;
-        }
-
-        table {
-          font-size: 0.9rem;
-        }
-
-        td {
-          padding: 0.75rem;
-        }
-
-        .exercise-description {
-          font-size: 0.85rem;
-        }
-
-        a {
-          padding: 0.4rem 0.8rem;
-        }
-      }
-    </style>
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+  .section-card {
+    padding: 1rem;
+    overflow-x: auto;
+  }
+  table {
+    font-size: 0.9rem;
+  }
+  td {
+    padding: 0.75rem;
+  }
+  .exercise-description {
+    font-size: 0.85rem;
+  }
+  a {
+    padding: 0.4rem 0.8rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+}
+      </style>
   </head>
   <body>
     <div class="container">
@@ -365,9 +366,10 @@
                 <a href="./design/ex-2-5/solution-2.html" target="_blank">Solution 2</a>
               </td>
               <td>
-                <p class="exercise-description">Composition Notes</p>
-                <td class="notes"></td>
+                <p class="exercise-description">No level-3</p>
+                <a href="" target="_blank"></a>
               </td>
+            
               <td class="notes"><a href="./design/ex-2-5/notes.html" target="_blank">Notes</a></td>
             </tr>
             <tr>
@@ -398,37 +400,77 @@
         <a style="text-align: center;" href="design-review/index.html">Check Reviews here</a>
       </section>
 
-      <table>
-        <tr>
-          <th>Exercise</th>
-          <th>Notes</th>
-        </tr>
-        <tr>
-          <td>Exercise 1</td>
-          <td><a href="/prog-basics/ex-1/notes.html" target="_blank" rel="noopener noreferrer">Notes</a></td>
-        </tr>
-        <tr>
-          <td>Exercise 2</td>
-          <td><a href="/prog-basics/ex-2/ex-2-notes.html" target="_blank" rel="noopener noreferrer">Notes</a></td>
-        </tr>
-        <tr>
-          <td>Exercise 3</td>
-          <td><a href="/prog-basics/ex-3/ex-3-notes.html" target="_blank" rel="noopener noreferrer">Notes</a></td>
-        </tr>
-        <tr>
-          <td>Exercise 4</td>
-          <td><a href="/prog-basics/ex-4/ex-4-notes.html" target="_blank" rel="noopener noreferrer">Notes</a></td>
-        </tr>
-        <tr>
-          <td>Exercise 5</td>
-          <td><a href="/prog-basics/ex-5/ex-5-notes.html" target="_blank" rel="noopener noreferrer">Notes</a></td>
-        </tr>
-        <tr>
-          <td>Exercise 6</td>
-          <td><a href="/prog-basics/ex-6/ex-6-notes.html" target="_blank" rel="noopener noreferrer">Notes</a></td>
-        </tr>
-      
-      </table>
+      <section class="section-card">
+        <h2>Programming Basics</h2>
+        <table>
+          <tr>
+            <th>Exercise</th>
+            <th>Notes</th>
+          </tr>
+          <tr>
+            <td>Exercise 1</td>
+            <td><a href="/prog-basics/ex-1/notes.html" target="_blank" rel="noopener noreferrer">Notes</a></td>
+          </tr>
+          <tr>
+            <td>Exercise 2</td>
+            <td><a href="/prog-basics/ex-2/ex-2-notes.html" target="_blank" rel="noopener noreferrer">Notes</a></td>
+          </tr>
+          <tr>
+            <td>Exercise 3</td>
+            <td><a href="/prog-basics/ex-3/ex-3-notes.html" target="_blank" rel="noopener noreferrer">Notes</a></td>
+          </tr>
+          <tr>
+            <td>Exercise 4</td>
+            <td><a href="/prog-basics/ex-4/ex-4-notes.html" target="_blank" rel="noopener noreferrer">Notes</a></td>
+          </tr>
+          <tr>
+            <td>Exercise 5</td>
+            <td><a href="/prog-basics/ex-5/ex-5-notes.html" target="_blank" rel="noopener noreferrer">Notes</a></td>
+          </tr>
+          <tr>
+            <td>Exercise 6</td>
+            <td><a href="/prog-basics/ex-6/ex-6-notes.html" target="_blank" rel="noopener noreferrer">Notes</a></td>
+          </tr>
+        
+        </table>
+      </section>
+
+
+      <section class="section-card">
+        <h2>Frontend-Programming</h2>
+        <table>
+          <tr>
+            <th>Exercise</th>
+            <th>Notes</th>
+          </tr>
+          <tr>
+            <td>Exercise 1</td>
+            <td><a href="/frontend-programming/ex-1/notes.html" target="_blank" rel="noopener noreferrer">Notes</a></td>
+          </tr>
+          <tr>
+            <td>Exercise 2</td>
+            <td><a href="/frontend-programming/ex-2/notes.html" target="_blank" rel="noopener noreferrer">Notes</a></td>
+          </tr>
+          <tr>
+            <td>Exercise 3</td>
+            <td><a href="/frontend-programming/ex-3/notes.html" target="_blank" rel="noopener noreferrer">Notes</a></td>
+          </tr>
+          <tr>
+            <td>Exercise 4</td>
+            <td><a href="/frontend-programming/ex-4/notes.html" target="_blank" rel="noopener noreferrer">Notes</a></td>
+          </tr>
+          <tr>
+            <td>Exercise 5</td>
+            <td><a href="/frontend-programming/ex-5/notes.html" target="_blank" rel="noopener noreferrer">Notes</a></td>
+          </tr>
+          <tr>
+            <td>Exercise 6</td>
+            <td><a href="/frontend-programming/ex-6/color-explorer/notes.html" target="_blank" rel="noopener noreferrer">Notes</a></td>
+          </tr>
+        
+        </table>
+      </section>
+
     </div>
   </body>
 </html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 4: Vite Full Exercise</title>
+  <style>
+    html{
+      background-color: white;
+    }
+    body {
+            font-family: monospace;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #f0f0f0;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+
+        h1, h2 {
+            text-transform: uppercase;
+            border-bottom: 4px solid #1a1a1a;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            text-align: center;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border: 3px solid #1a1a1a;
+            box-shadow: 8px 8px 0 #1a1a1a;
+            margin-bottom: 30px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        ul {
+            list-style-type: square;
+            padding-left: 25px;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        code {
+            background: #1a1a1a;
+            color: #fff;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+
+        .highlight {
+            background: #ffd700;
+            padding: 2px 6px;
+        }
+    code {
+      
+      padding: 2px 4px;
+      font-size: 0.9rem;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Exercise 4: Vite Full Exercise</h1>
+
+  <h2>Objective:</h2>
+  <p>Explore advanced features of Vite to create a highly optimized, production-ready application while adhering to modern best practices.</p>
+
+  <h2>Steps Followed:</h2>
+  <h3>1. Environment-Specific Configurations:</h3>
+  <ul>
+    <li>Created <code>.env.development</code> and <code>.env.production</code> files to define API endpoints:</li>
+    <code>.env.development:</code>
+    <ul>
+      <li><code>VITE_API_URL=http://localhost:3000/api</code></li>
+    </ul>
+    <code>.env.production:</code>
+    <ul>
+      <li><code>VITE_API_URL=https://production.api.com</code></li>
+    </ul>
+    <li>Fetched data dynamically based on the environment:</li>
+    <code>import.meta.env.VITE_API_URL</code>
+  </ul>
+
+  <h3>2. Advanced Vite Practices:</h3>
+  <ul>
+    <li>Integrated <code>vite-plugin-checker</code> for real-time TypeScript type-checking:</li>
+    <code>npm install vite-plugin-checker</code>
+    <li>Added <code>vite-plugin-eslint</code> for linting in the development workflow:</li>
+    <code>npm install vite-plugin-eslint</code>
+    <li>Configured Vite to display errors during the build process.</li>
+  </ul>
+
+  <h3>3. Building Upon Previous Work:</h3>
+  <ul>
+    <li>Extended the application from Exercise 3:</li>
+    <ul>
+      <li>Implemented lazy loading modules using <code>import()</code>.</li>
+      <li>Enabled code splitting for optimized bundle sizes.</li>
+    </ul>
+    <li>Optimized for production:</li>
+    <ul>
+      <li>Ensured minification with terser and tree-shaking for unused imports.</li>
+      <li>Analyzed the final build performance using Vite's built-in stats.</li>
+    </ul>
+  </ul>
+
+  <h2>Challenges Faced:</h2>
+  <ul>
+    <li>Understanding the integration of plugins for linting and type-checking.</li>
+    <li>Configuring environment variables securely for both local and production environments.</li>
+    <li>Testing and debugging lazy-loaded modules.</li>
+  </ul>
+
+  <h2>Outputs:</h2>
+  <ul>
+    <li>Environment-specific data fetching based on <code>.env</code> files.</li>
+    <li>A production-ready application with lazy loading and code splitting.</li>
+    <li>Seamless integration of linting and type-checking tools.</li>
+  </ul>
+
+  <h2>Experience:</h2>
+  <p>This exercise showcased Vite's robust capabilities, from modular development to production optimization. The streamlined setup made it easy to implement advanced features like lazy loading and environment-specific configurations. Debugging and performance testing were much smoother thanks to the integrated tools.</p>
+</body>
+</html>

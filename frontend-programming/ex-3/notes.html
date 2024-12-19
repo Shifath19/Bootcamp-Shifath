@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 3: Starting with Vite</title>
+  <style>
+    html{
+      background-color: #fff;
+    }
+    body{
+        font-family: monospace;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #f0f0f0;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+
+        h1, h2 {
+            text-transform: uppercase;
+            border-bottom: 4px solid #1a1a1a;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            text-align: center;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border: 3px solid #1a1a1a;
+            box-shadow: 8px 8px 0 #1a1a1a;
+            margin-bottom: 30px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        ul {
+            list-style-type: square;
+            padding-left: 25px;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        code {
+            background: #1a1a1a;
+            color: #fff;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+
+        .highlight {
+            background: #ffd700;
+            padding: 2px 6px;
+        }
+  </style>
+</head>
+<body>
+  <h1>Exercise 3: Starting with Vite</h1>
+
+  <h2>Objective:</h2>
+  <p>Explore the Vite build tool to scaffold, configure, and modularize modern web projects with JavaScript and TypeScript.</p>
+
+  <h2>Steps Followed:</h2>
+  <h3>1. Starter Template (JavaScript):</h3>
+  <ul>
+    <li>Initialized a Vite project using the vanilla JavaScript template:</li>
+    <code>npm create vite@latest my-js-app -- --template vanilla</code>
+    <li>Rebuilt the student management dashboard from Exercise 1.</li>
+    <li>Loaded student data dynamically from a JSON file and displayed it in a table.</li>
+  </ul>
+
+  <h3>2. Starter Template (TypeScript):</h3>
+  <ul>
+    <li>Initialized a Vite project with the TypeScript template:</li>
+    <code>npm create vite@latest my-ts-app -- --template vanilla-ts</code>
+    <li>Enhanced the dashboard:</li>
+    <ul>
+      <li>Fetched data from a CSV file using PapaParse.</li>
+      <li>Displayed it using AG Grid with modularized code for data loading, parsing, and rendering.</li>
+    </ul>
+  </ul>
+
+  <h3>3. SCSS with Vite:</h3>
+  <ul>
+    <li>Defined a CSS file with classes <code>m-1</code>, <code>m-2</code>, ..., <code>m-8</code> where <code>m-n = n * 2px</code>.</li>
+    <li>Recreated the same in SCSS using loops.</li>
+    <li>Integrated SCSS into the Vite project, demonstrating its support for SCSS files seamlessly.</li>
+  </ul>
+
+  <h2>Challenges Faced:</h2>
+  <ul>
+    <li>Configuring SCSS loops and ensuring syntax correctness.</li>
+    <li>Managing dynamic imports in the TypeScript version.</li>
+    <li>Understanding and setting up AG Grid for advanced table rendering.</li>
+  </ul>
+
+  <h2>Outputs:</h2>
+  <ul>
+    <li>Two working Vite-based projects (JavaScript and TypeScript).</li>
+    <li>Functional dashboards with dynamic data loading and modularized code.</li>
+    <li>SCSS-integrated projects with flexible styling via loops.</li>
+  </ul>
+
+  <h2>Experience:</h2>
+  <p>This exercise provided hands-on exposure to Vite's capabilities. It streamlined the development lifecycle and showcased modern tooling for modular, scalable web projects. Vite's simplicity and speed made working with SCSS and TypeScript enjoyable and efficient.</p>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Color Explorer</title>
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+  <div class="app-container">
+    <aside class="color-controls">
+      <h2>Color Selection</h2>
+      <div class="color-picker">
+        <label for="mainColor">Choose main color:</label>
+        <input type="color" id="mainColor" value="#4a90e2">
+        
+        <div class="color-variations">
+          <h3>Color Variations</h3>
+          <div id="variations-container"></div>
+        </div>
+
+        <div class="opacity-control">
+          <label for="opacity">Opacity:</label>
+          <input type="range" id="opacity" min="0" max="100" value="100">
+          <span id="opacity-value">100%</span>
+        </div>
+      </div>
+    </aside>
+
+    <main class="preview-section">
+      <div class="sample-page">
+        <header>
+          <h1>Welcome to Sample Page</h1>
+          <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+          </nav>
+        </header>
+
+        <article>
+          <h2>Article Title</h2>
+          <p>This is a sample paragraph showing how your selected colors look in real content.</p>
+          
+          <div class="card">
+            <h3>Feature Card</h3>
+            <p>This is a sample card component.</p>
+          </div>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Data 1</td>
+                <td>Data 2</td>
+              </tr>
+            </tbody>
+          </table>
+        </article>
+      </div>
+    </main>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
