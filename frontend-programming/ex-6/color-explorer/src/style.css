@@ -1,0 +1,70 @@
+:root {
+  --primary-color: #4a90e2;
+  --primary-light: #7cb1f1;
+  --primary-dark: #2171c7;
+}
+
+.app-container {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  min-height: 100vh;
+  gap: 2rem;
+}
+
+.color-controls {
+  padding: 1rem;
+  background: #f5f5f5;
+  border-right: 1px solid #ddd;
+}
+
+.color-variations {
+  margin-top: 2rem;
+}
+
+.variation-swatch {
+  width: 100%;
+  height: 40px;
+  margin: 0.5rem 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.preview-section {
+  padding: 2rem;
+}
+
+/* Sample page styles */
+.sample-page header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem;
+}
+
+nav a {
+  color: white;
+  margin-right: 1rem;
+  text-decoration: none;
+}
+
+.card {
+  background-color: var(--primary-light);
+  padding: 1rem;
+  border-radius: 4px;
+  margin: 1rem 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+th, td {
+  border: 1px solid var(--primary-dark);
+  padding: 0.5rem;
+}
+
+th {
+  background-color: var(--primary-color);
+  color: white;
+}

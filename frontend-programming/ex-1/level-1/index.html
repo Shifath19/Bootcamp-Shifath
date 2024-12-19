@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Table App</title>
+    <style>
+        /* Brutalist Design */
+        body {
+            font-family: "Arial", sans-serif;
+            margin: 20px;
+            background-color: white;
+            color: black;
+            line-height: 1.6;
+        }
+
+        h1 {
+          text-align: center;
+            font-size: 3rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        /* Buttons */
+        button {
+          border-radius: 8px;
+            background: none;
+            border: 2px solid black;
+            color: black;
+            font-size: 1rem;
+            text-transform: uppercase;
+            padding: 10px 20px;
+            margin-right: 10px;
+            cursor: pointer;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        button:hover {
+            background: black;
+            color: white;
+        }
+
+        /* Table Styles */
+        table {
+            width: 100%;
+            border: 2px solid rgb(48, 47, 47);
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: white;
+            
+            
+        }
+
+        th, td {
+          
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+            text-transform: uppercase;
+            
+        }
+
+        /* Highlighted Row */
+        .highlight {
+            background-color:rgb(171, 215, 192);
+            color: black;
+        }
+
+        /* Browser Info */
+        #browserInfo {
+          border-radius: 7px;
+            margin-top: 20px;
+            border: 2px solid black;
+            padding: 10px;
+            font-family: monospace;
+            background: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h2>Shifath's</h2>
+    <h1>Student Table Management</h1>
+
+    <!-- Buttons -->
+    <button id="addStudentBtn">Add Student</button>
+    <button id="changeFontBtn">Change Font</button>
+
+    <!-- Table -->
+    <table id="studentTable">
+        <thead >
+            <tr >
+                <th >ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Grade</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Student rows will appear here -->
+        </tbody>
+    </table>
+
+    <!-- Browser Info Section -->
+    <div id="browserInfo"></div>
+
+    <!-- Script -->
+    <script>
+        // Add Student Button Logic
+        document.getElementById("addStudentBtn").addEventListener("click", function () {
+            const table = document.getElementById("studentTable").getElementsByTagName('tbody')[0];
+
+            // Create a new row
+            const newRow = document.createElement("tr");
+
+            // Create cells
+            newRow.innerHTML = `
+                <td>1</td>
+                <td>John Doe</td>
+                <td>18</td>
+                <td>A</td>
+            `;
+
+            // Add highlight class dynamically
+            newRow.classList.add("highlight");
+
+            // Append row to the table
+            table.appendChild(newRow);
+        });
+
+        // Change Font Button Logic
+        document.getElementById("changeFontBtn").addEventListener("click", function () {
+            const head = document.getElementsByTagName('head')[0];
+
+            // Check if the font link already exists
+            if (!document.getElementById("googleFontLink")) {
+                const link = document.createElement("link");
+                link.id = "googleFontLink";
+                link.rel = "stylesheet";
+                link.href = "https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap";
+                head.appendChild(link);
+            }
+
+            // Apply the font to the table
+            document.getElementById("studentTable").style.fontFamily = "'Courier Prime', monospace";
+        });
+
+        // Display Browser Information
+        function displayBrowserInfo() {
+            const browserInfoDiv = document.getElementById("browserInfo");
+            const userAgent = navigator.userAgent;
+            const browserName = navigator.appName;
+            const browserVersion = navigator.appVersion;
+            const windowWidth = window.innerWidth;
+            const windowHeight = window.innerHeight;
+
+            browserInfoDiv.innerHTML = `
+                <h3>Browser Information:</h3>
+                <p><strong>Browser Name:</strong> ${browserName}</p>
+                <p><strong>Browser Version:</strong> ${browserVersion}</p>
+                <p><strong>User Agent:</strong> ${userAgent}</p>
+                <p><strong>Window Dimensions:</strong> ${windowWidth}px (width) x ${windowHeight}px (height)</p>
+            `;
+        }
+
+        // Run on page load
+        displayBrowserInfo();
+
+        // Update window dimensions on resize
+        window.addEventListener("resize", displayBrowserInfo);
+    </script>
+</body>
+</html>

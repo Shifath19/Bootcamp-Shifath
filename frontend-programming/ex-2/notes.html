@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 2: Using Tools - Notes</title>
+    <style>
+      body {
+        font-family: 'Courier New', Courier, monospace;
+        margin: 0;
+        padding: 20px;
+        background-color: #f9f9f9;
+        color: #222;
+      }
+      h1, h2 {
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+      h1 {
+        border-bottom: 2px solid #000;
+        padding-bottom: 5px;
+      }
+      h2 {
+        color: #444;
+      }
+      p, ul {
+        margin: 10px 0;
+        line-height: 1.5;
+      }
+      ul {
+        list-style-type: square;
+      }
+      .highlight {
+        color: #fff;
+        background: #0078d7;
+        padding: 2px 4px;
+        border-radius: 3px;
+      }
+      .challenges {
+        background-color: #ffefef;
+        border-left: 4px solid #d9534f;
+        padding: 10px;
+        margin: 15px 0;
+      }
+      .outputs {
+        background-color: #e9f7ef;
+        border-left: 4px solid #5cb85c;
+        padding: 10px;
+        margin: 15px 0;
+      }
+      footer {
+        margin-top: 20px;
+        font-size: 0.9em;
+        text-align: center;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Exercise 2: Using Tools</h1>
+
+    <h2>Objective:</h2>
+    <p>
+      Learn how to package and structure projects using <span class="highlight">TypeScript</span> while
+      following a structured development life cycle: Development → Testing → Production.
+    </p>
+
+    <h2>Steps Followed:</h2>
+    <ul>
+      <li>
+        <strong>Set Up a TypeScript Project:</strong> Initialized the project using npm
+        and configured TypeScript with a <span class="highlight">tsconfig.json</span> file.
+      </li>
+      <li>
+        <strong>Solved Problems:</strong>
+        <ul>
+          <li>
+            <strong>Problem 1:</strong> Loaded a JSON file and dynamically rendered a table with sorting functionality.
+          </li>
+          <li>
+            <strong>Problem 2:</strong> Parsed CSV data using PapaParse, enhanced table filtering, and row highlighting.
+          </li>
+          <li>
+            <strong>Problem 3:</strong> Integrated a build tool (<span class="highlight">tsc</span>) and packaged the app for development and production.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Development Life Cycle:</strong> Used <span class="highlight">vite</span> for:
+        <ul>
+          <li>Development server with live reload.</li>
+          <li>Linting and type-checking during development.</li>
+          <li>Production builds with bundling.</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Challenges Faced:</h2>
+    <div class="challenges">
+      <ul>
+        <li>Understanding and configuring <span class="highlight">tsconfig.json</span> for complex setups.</li>
+        <li>
+          Debugging issues while fetching and parsing CSV data using PapaParse, especially with
+          malformed data rows.
+        </li>
+        <li>
+          Ensuring compatibility of bundled code across different environments (development vs. production).
+        </li>
+      </ul>
+    </div>
+
+    <h2>Outputs:</h2>
+    <div class="outputs">
+      <ul>
+        <li>
+          Successfully rendered a table with JSON data and implemented sorting functionality.
+        </li>
+        <li>
+          Integrated CSV parsing and filtering using PapaParse with visual row highlights for
+          specific conditions.
+        </li>
+        <li>
+          Packaged the application for production with minimized and optimized assets.
+        </li>
+      </ul>
+    </div>
+
+    <h2>Experience:</h2>
+    <p>
+      This exercise was an enriching experience that provided practical exposure to TypeScript project structuring, development workflows, and tool integration. Overcoming challenges, especially around bundling and environment-specific configurations, significantly deepened my understanding of modern web development tools.
+    </p>
+
+    <footer>
+      &copy; 2024 | TypeScript Project Notes
+    </footer>
+  </body>
+</html>

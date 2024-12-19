@@ -1,0 +1,35 @@
+// Variables
+$spacer: 2px;
+$directions: (
+  '': '',
+  't': 'top',
+  'b': 'bottom',
+  'l': 'left',
+  'r': 'right'
+);
+
+// Generate margin utilities
+@for $i from 1 through 8 {
+  @each $prefix, $direction in $directions {
+    .m#{$prefix}-#{$i} {
+      @if $direction == '' {
+        margin: $spacer * $i;
+      } @else {
+        margin-#{$direction}: $spacer * $i;
+      }
+    }
+  }
+}
+
+// Optional: Generate padding utilities as well
+@for $i from 1 through 8 {
+  @each $prefix, $direction in $directions {
+    .p#{$prefix}-#{$i} {
+      @if $direction == '' {
+        padding: $spacer * $i;
+      } @else {
+        padding-#{$direction}: $spacer * $i;
+      }
+    }
+  }
+}
