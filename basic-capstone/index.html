@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Papers Database</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 style="font-size: 2.5rem;">ZipMyResearch - Sort, search, and zip your way to insights.</h1>
+            <div class="header-controls">
+                <select id="sortSelect">
+                    <option value="">Sort by...</option>
+                    <option value="year">Year</option>
+                    <option value="title">Title</option>
+                    <option value="authors">Authors</option>
+                </select>
+                <button id="exportBtn">Export Data</button>
+            </div>
+        </header>
+
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search across all fields...">
+            <div class="search-stats">
+                <span id="resultCount">0 results</span>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <aside class="filters-panel">
+                <div class="filters-header">
+                    <h2>Filters</h2>
+                    <button id="clearFilters">Clear All</button>
+                </div>
+                <div id="activeFilters" class="active-filters">
+                    <!-- Active filters will be displayed here -->
+                </div>
+                <div id="filterContainer">
+                    <!-- Dynamic filters will be inserted here -->
+                </div>
+            </aside>
+
+            <main class="papers-container">
+                <div id="loadingIndicator" class="loading-indicator">
+                    
+                </div>
+                <div id="papersList"></div>
+                <div class="pagination">
+                    <button id="prevPage">Previous</button>
+                    <span id="currentPage">Page 1</span>
+                    <button id="nextPage">Next</button>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>
