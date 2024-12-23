@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Weather Widget Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin: 20px auto;
+            max-width: 400px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #666;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #357abd;
+        }
+        .widgets-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Interactive Weather Widget</h1>
+    
+    <div class="form-container">
+        <form id="weatherForm" onsubmit="return updateCity(event)">
+            <div class="form-group">
+                <label for="cityInput">Enter City Name:</label>
+                <input 
+                    type="text" 
+                    id="cityInput" 
+                    placeholder="Enter city name"
+                    required
+                >
+            </div>
+            <button type="submit">Update Weather</button>
+        </form>
+    </div>
+
+    <div class="widgets-container">
+        <city-weather city="Los Angeles"></city-weather>
+    </div>
+    
+    <script type="module">
+        import './weather-widget.js';
+        
+        window.updateCity = (event) => {
+            event.preventDefault();
+            const cityInput = document.getElementById('cityInput');
+            const weatherWidget = document.querySelector('city-weather');
+            weatherWidget.setAttribute('city', cityInput.value);
+            cityInput.value = ''; // Clear the input after updating
+            return false;
+        };
+    </script>
+</body>
+</html>

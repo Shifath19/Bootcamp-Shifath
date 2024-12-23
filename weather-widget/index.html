@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Widget Demos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px 0;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #eee;
+        }
+
+        h1 {
+            color: #333;
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-top: 10px;
+        }
+
+        .demo-section {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #444;
+            margin-top: 0;
+        }
+
+        .description {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .form-container {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            max-width: 400px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #666;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #357abd;
+        }
+
+        .widgets-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .demo-links {
+            margin-top: 40px;
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+        }
+
+        .demo-links a {
+            color: #4a90e2;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        .demo-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Weather Widget Demos</h1>
+        <div class="subtitle">A showcase of different weather widget implementations</div>
+    </header>
+
+    <div class="demo-section">
+        <h2>Static Weather Widgets</h2>
+        <div class="description">
+            Simple implementation showing weather for predefined cities.
+        </div>
+        <div class="widgets-container">
+            <city-weather city="Los Angeles"></city-weather>
+            <city-weather city="New York"></city-weather>
+            <city-weather city="London"></city-weather>
+        </div>
+    </div>
+
+    <div class="demo-section">
+        <h2>Interactive Weather Widget</h2>
+        <div class="description">
+            Search for weather in any city using the form below.
+        </div>
+        <div class="form-container">
+            <form id="weatherForm" onsubmit="return updateCity(event)">
+                <div class="form-group">
+                    <label for="cityInput">Enter City Name:</label>
+                    <input 
+                        type="text" 
+                        id="cityInput" 
+                        placeholder="Enter city name"
+                        required
+                    >
+                </div>
+                <button type="submit">Show Weather</button>
+            </form>
+        </div>
+        <div class="widgets-container">
+            <city-weather city="Tokyo"></city-weather>
+        </div>
+    </div>
+
+    <div class="demo-links">
+        <a href="simple-weather.html">View Simple Demo</a>
+        <a href="interactive-weather.html">View Interactive Demo</a>
+    </div>
+
+    <script type="module">
+        import './weather-widget.js';
+        
+        window.updateCity = (event) => {
+            event.preventDefault();
+            const cityInput = document.getElementById('cityInput');
+            const weatherWidget = document.querySelector('.demo-section:nth-child(2) city-weather');
+            weatherWidget.setAttribute('city', cityInput.value);
+            cityInput.value = '';
+            return false;
+        };
+    </script>
+</body>
+</html>
