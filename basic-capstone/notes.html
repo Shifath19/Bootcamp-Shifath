@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Papers Filter - Documentation</title>
+    <style>
+        :root {
+            --primary-color: #4faaf4;
+            --text-color: #333;
+            --border-color: #e0e0e0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .highlight {
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 4px;
+            border-left: 4px solid var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #e3f2fd;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 14px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>ZipMyResearch -Research Papers Filter Application</h1>
+
+    <section>
+        <h2>Abstract</h2>
+        <p class="highlight">
+            A dynamic web application designed to help users efficiently filter and search through research papers. 
+            The application provides an intuitive interface with real-time filtering capabilities, advanced search options, 
+            and data export functionality, making it easier for researchers to find relevant papers from a large dataset.
+        </p>
+    </section>
+
+
+    <section>
+        <h2>LLMs Used</h2>
+        <p class="highlight">
+            I used the Cursor IDE to write code and generate boilerplates. <a href="https://www.cursor.com/" target="_blank" rel="noopener noreferrer">Link</a>
+        </p>
+    </section>
+
+    <section>
+        <h2>Key Functionalities</h2>
+        <ul>
+            <li><span class="tag">Search</span> Global search across all paper fields with real-time updates</li>
+            <li><span class="tag">Dynamic</span> Retrieved filter options dynamically.</li>
+
+            <li><span class="tag">Filters</span> Dynamic filter generation based on data types:
+                <ul>
+                    <li>Range sliders for numerical values</li>
+                    <li>Dropdowns for fields with few unique values</li>
+                    <li>Search inputs for fields with many unique values</li>
+                </ul>
+            </li>
+            <li><span class="tag">Pagination</span> Display of papers in manageable chunks with page navigation</li>
+            <li><span class="tag">Export</span> Data export functionality in both JSON and CSV formats</li>
+            <li><span class="tag">Sorting</span> Dynamic sorting by various fields</li>
+            <li><span class="tag">Active Filters</span> Visual display of currently active filters with easy removal</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Technical Challenges Faced</h2>
+        <ul>
+            <li><span class="tag">Performance</span> Handling large datasets efficiently while maintaining responsive UI</li>
+            <li><span class="tag">Data Analysis</span> Automatically determining appropriate filter types for different fields</li>
+            <li><span class="tag">State Management</span> Managing complex filter combinations and their interactions</li>
+            <li><span class="tag">UI/UX</span> Creating an intuitive interface for multiple filter types</li>
+            <li><span class="tag">Data Export</span> Handling different data formats and large export files</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Potential Improvements</h2>
+        <ul>
+            
+            <li><span class="tag">Advanced Search</span> Implement advanced search operators and field-specific search</li>
+            <li><span class="tag">Favorites</span> Allow users to save favorite papers or create collections</li>
+            <li><span class="tag">Mobile UX</span> Enhance mobile experience with touch-friendly controls</li>
+            <li><span class="tag">Filter Presets</span> Add ability to save and load filter combinations</li>
+            <li><span class="tag">Performance</span> Implement virtual scrolling for better handling of large lists</li>
+            <li><span class="tag">Accessibility</span> Improve keyboard navigation and screen reader support</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Technologies Used</h2>
+        <p>
+            <span class="tag">HTML5</span>
+            <span class="tag">CSS3</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">ES6 Modules</span>
+            
+            <span class="tag">Vite</span>
+        </p>
+    </section>
+</body>
+</html>
