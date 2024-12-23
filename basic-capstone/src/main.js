@@ -33,11 +33,16 @@ class ResearchPapersApp {
 
     async loadData() {
         /* Fetches and loads the first 1000 research papers from the data source */
-        const response = await fetch('./public/data.json');
-        if (!response.ok) throw new Error('Failed to fetch data');
-        const data = await response.json();
-        this.papers = data.slice(0, 1000);
-        this.filteredPapers = [...this.papers];
+        try {
+            const response = await fetch('./public/data.json');
+            if (!response.ok) throw new Error('Failed to fetch data');
+            const data = await response.json();
+            this.papers = data.slice(0, 1000);
+            this.filteredPapers = [...this.papers];
+        } catch (error) {
+            console.error('Failed to load data:', error);
+            this.showError('Failed to load research papers data.');
+        }
     }
 
     setupComponents() {
