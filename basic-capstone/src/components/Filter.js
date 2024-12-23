@@ -1,6 +1,6 @@
 export class Filter {
   constructor(field, type, data, onFilterChange) {
-       // I store the field name, filter type, data array, and callback function
+       //  store the field name, filter type, data array, and callback function
         // that'll be triggered when the filter changes
       this.field = field;
       this.type = type;
@@ -9,7 +9,7 @@ export class Filter {
   }
 
   createFilterElement() {
-     // I create the main wrapper for a filter element. Each filter gets its own
+     //  create the main wrapper for a filter element. Each filter gets its own
         // container with a label and the appropriate input type
       const wrapper = document.createElement('div');
       wrapper.className = 'filter-item';
