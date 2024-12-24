@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sonia</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #0a051f;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background: linear-gradient(45deg, #4a1786, #7209b7);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        h2 {
+            margin: 0;
+            font-weight: 600;
+        }
+        
+        h4 {
+            color: #4a1786;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .card {
+            background: #ffffff;
+            border: 1px solid #eaeaea;
+            border-radius: 6px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        
+        #tldr {
+            background-color: #f8f9fa;
+            padding: 1.5rem;
+            border-left: 4px solid #4a1786;
+            margin: 2rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+        
+        .header-link {
+            color: white;
+            text-decoration: none;
+            opacity: 0.9;
+            transition: opacity 0.2s;
+        }
+        
+        .header-link:hover {
+            opacity: 1;
+        }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h2>Sonia-paperVista-review</h2>
+      <a href="https://paper-vista-z1su.vercel.app/" class="header-link" target="_blank" rel="noopener noreferrer">View Live Site</a>
+    </header>
+    <a href="index.html" target="_blank" rel="noopener noreferrer">Go Back</a>
+    <div class="container">
+      <h4>Review Overview</h4>
+      <div id="tldr">
+        <p>
+          Paper-Vista offers a clean interface for searching academic papers with effective filtering capabilities. The purple-themed design creates a professional atmosphere, while the grid layout presents paper information clearly. The implementation includes basic search and filter functions, though there's room for additional filtering options.
+        </p>
+      </div>
+
+      <div class="card">
+        <h4>1. Interface Elements</h4>
+        <p>
+          <strong>Header:</strong> Purple gradient header with clear branding and site title.
+        </p>
+        <p>
+          <strong>Search Controls:</strong> Four main filter inputs at the top:
+          - Title filter
+          - Minimum citations
+          - Start year
+          - End year
+          Plus a dropdown for records per page selection.
+        </p>
+        <p>
+          <strong>Action Buttons:</strong> "Export Filtered Data" and "Clear All Filters" buttons provide clear data management options.
+        </p>
+
+        <h4>2. Content Display</h4>
+        <p>
+          <strong>Paper Cards:</strong> Each research paper is displayed in a white card showing:
+          - Full paper title
+          - Author list
+          - Publication year
+          - Citation count
+          - Publication venue
+          - Preview of abstract
+          - "Read More" option
+        </p>
+
+        <h4>3. Areas for Improvement</h4>
+        <p>
+          <strong>Additional Filters:</strong> Could add:
+          - Author search
+          - Abstract text search
+          - Subject area filters
+        </p>
+        <p>
+          <strong>Visual Feedback:</strong> Add loading states and filter application indicators
+        </p>
+        <p>
+          <strong>Mobile Optimization:</strong> Ensure responsive design for smaller screens
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
