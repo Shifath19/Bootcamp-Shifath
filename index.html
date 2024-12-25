@@ -7,7 +7,7 @@
     <style>
       :root {
   --primary-color: #1a472a;    /* Dark forest green */
-  --background-color: #f5f7f5;  /* Light mint */
+  --background-color: #ffffff;  /* Light mint */
   --card-background: #ffffff;   /* Pure white */
   --accent-color: #2d5a27;     /* Medium forest green */
   --secondary-accent: #8fb996;  /* Sage green */
@@ -27,11 +27,25 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1000px;  
   margin: 0 auto;
   border: 3px solid var(--primary-color);
   padding: 2rem;
-  background: var(--card-background);
+  background-color: rgb(254 249 195);
+
+}
+
+.github-link {
+  display: block;
+  width: fit-content;
+  margin: 2rem auto;  /* Center the button and add vertical spacing */
+  background-color: var(--primary-color) !important;  /* Override default link background */
+  color: white !important;  /* Override default link color */
+  box-shadow: var(--shadow);
+}
+
+.github-link:hover {
+  background-color: var(--accent-color) !important;
 }
 
 h1 {
@@ -72,8 +86,9 @@ h2 {
 }
 
 table {
-  width: 100%;
+  width: 90%;
   border-collapse: collapse;
+  margin: 0 auto;
   border: 3px solid var(--primary-color);
 }
 
@@ -164,10 +179,10 @@ td a + a {
       </style>
   </head>
   <body>
-    <span style="position: fixed; top: 0.5rem; right: 0.7rem;"><a href="https://github.com/Shifath19/Bootcamp-Shifath" target="_blank" rel="noopener noreferrer">Github</a></span>
+  
     <div class="container">
-      <h1>Shifath-BootCamp Week 1 </h1>
-      
+      <h1>Shifath-BootCamp </h1>
+      <a href="https://github.com/Shifath19/Bootcamp-Shifath" target="_blank" class="github-link">GitHub repo</a>
       
       <section class="section-card">
         <h1>HTML/CSS Exercises </h1>
@@ -268,10 +283,11 @@ td a + a {
                 <p class="exercise-description">
                   Reading different blogs and newsletters 
                 </p>
-              
-                <a href="./html-css/ex-6/solution.html" target="_blank">Link</a>
               </td>
-              <td class="notes"><a href="./html-css/ex-6/notes.html" target="_blank">Notes</a></td>
+              <td style="display: none;"></td>
+              <td></td>
+              <td></td>
+              <td class="notes"><a href="./html-css/ex-6/solution.html" target="_blank">Notes</a></td>
             </tr>
           </tbody>
         </table>
@@ -498,7 +514,7 @@ td a + a {
       </section>
 
       <section class="section-card">
-        <h1>Capstone Review</h1>
+        <h1>Capstone Reviews</h1>
         <table>
           <tr>
             <th>Exercise</th>
@@ -507,8 +523,12 @@ td a + a {
           </tr>
 
           <tr>
-            <td>Capstone Reviews</td>
-            <td><a href="basic-review/index.html" target="_blank" rel="noopener noreferrer">Link</a></td>
+            <td>Data exploration Project</td>
+            <td><a href="basic-review/data-exploration-review/index.html" target="_blank" rel="noopener noreferrer">Link</a></td>
+          </tr>
+          <tr>
+            <td>Weather Widget Project</td>
+            <td><a href="basic-review/weather-widget-review/index.html" target="_blank" rel="noopener noreferrer">Link</a></td>
           </tr>
         </table>
       </section>
