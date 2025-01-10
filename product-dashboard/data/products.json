@@ -1,0 +1,274 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Organic Apples",
+      "category": "Fruits",
+      "price": 3.99,
+      "stock": 50,
+      "rating": 4.7,
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 2,
+      "name": "Whole Wheat Bread",
+      "category": "Bakery",
+      "price": 2.49,
+      "stock": 30,
+      "rating": 4.5,
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 3,
+      "name": "Almond Milk",
+      "category": "Dairy",
+      "price": 4.99,
+      "stock": 25,
+      "rating": 4.6,
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 4,
+      "name": "Brown Rice",
+      "category": "Grains",
+      "price": 1.99,
+      "stock": 60,
+      "rating": 4.4,
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 5,
+      "name": "Peanut Butter",
+      "category": "Pantry",
+      "price": 5.49,
+      "stock": 15,
+      "rating": 4.8,
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 6,
+      "name": "Greek Yogurt",
+      "category": "Dairy",
+      "price": 1.29,
+      "stock": 40,
+      "rating": 4.3,
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 7,
+      "name": "Orange Juice",
+      "category": "Beverages",
+      "price": 3.49,
+      "stock": 35,
+      "rating": 4.2,
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 8,
+      "name": "Eggs (12-pack)",
+      "category": "Dairy",
+      "price": 2.99,
+      "stock": 20,
+      "rating": 4.9,
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 9,
+      "name": "Spinach",
+      "category": "Vegetables",
+      "price": 2.49,
+      "stock": 45,
+      "rating": 4.6,
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 10,
+      "name": "Bananas",
+      "category": "Fruits",
+      "price": 0.59,
+      "stock": 70,
+      "rating": 4.5,
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 11,
+      "name": "Cheddar Cheese",
+      "category": "Dairy",
+      "price": 3.99,
+      "stock": 25,
+      "rating": 4.7,
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 12,
+      "name": "Chicken Breast",
+      "category": "Meat",
+      "price": 6.99,
+      "stock": 10,
+      "rating": 4.8,
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 13,
+      "name": "Tomatoes",
+      "category": "Vegetables",
+      "price": 1.99,
+      "stock": 40,
+      "rating": 4.4,
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 14,
+      "name": "Honey",
+      "category": "Pantry",
+      "price": 7.99,
+      "stock": 12,
+      "rating": 4.9,
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 15,
+      "name": "Cucumber",
+      "category": "Vegetables",
+      "price": 0.89,
+      "stock": 50,
+      "rating": 4.3,
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 16,
+      "name": "Potatoes",
+      "category": "Vegetables",
+      "price": 2.99,
+      "stock": 60,
+      "rating": 4.5,
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 17,
+      "name": "Ground Coffee",
+      "category": "Beverages",
+      "price": 8.49,
+      "stock": 20,
+      "rating": 4.8,
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 18,
+      "name": "Green Tea",
+      "category": "Beverages",
+      "price": 5.99,
+      "stock": 25,
+      "rating": 4.6,
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 19,
+      "name": "Carrots",
+      "category": "Vegetables",
+      "price": 1.49,
+      "stock": 50,
+      "rating": 4.5,
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 20,
+      "name": "Bell Peppers",
+      "category": "Vegetables",
+      "price": 3.49,
+      "stock": 30,
+      "rating": 4.7,
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 21,
+      "name": "Strawberries",
+      "category": "Fruits",
+      "price": 4.99,
+      "stock": 15,
+      "rating": 4.8,
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 22,
+      "name": "Olive Oil",
+      "category": "Pantry",
+      "price": 9.99,
+      "stock": 18,
+      "rating": 4.9,
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 23,
+      "name": "Broccoli",
+      "category": "Vegetables",
+      "price": 2.29,
+      "stock": 40,
+      "rating": 4.6,
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 24,
+      "name": "Salmon",
+      "category": "Meat",
+      "price": 12.99,
+      "stock": 8,
+      "rating": 4.9,
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 25,
+      "name": "Pasta",
+      "category": "Pantry",
+      "price": 1.49,
+      "stock": 35,
+      "rating": 4.3,
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 26,
+      "name": "Ice Cream",
+      "category": "Frozen",
+      "price": 4.49,
+      "stock": 20,
+      "rating": 4.5,
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 27,
+      "name": "Frozen Pizza",
+      "category": "Frozen",
+      "price": 5.99,
+      "stock": 10,
+      "rating": 4.4,
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 28,
+      "name": "Bagels",
+      "category": "Bakery",
+      "price": 3.29,
+      "stock": 15,
+      "rating": 4.7,
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 29,
+      "name": "Mixed Nuts",
+      "category": "Snacks",
+      "price": 6.49,
+      "stock": 18,
+      "rating": 4.8,
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 30,
+      "name": "Dark Chocolate",
+      "category": "Snacks",
+      "price": 2.99,
+      "stock": 22,
+      "rating": 4.6,
+      "image": "https://via.placeholder.com/150"
+    }
+  ]
+}
