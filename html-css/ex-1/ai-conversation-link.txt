@@ -1,3 +1,4 @@
-Gpt Used : ChatGpt
+Gpt Used : ChatGpt by OpenAi
 
 Conversation Link : https://chatgpt.com/share/675b8cff-7bd8-800e-9d09-5d8b975c9197
+
