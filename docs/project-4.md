@@ -35,7 +35,7 @@ The project involves creating a web-based user interface for visualizing and ana
 
 ## System Architecture
 
-![Example image](https://soqmsb04dk.ufs.sh/f/KBljPeC0dD9GWT4mAObYumtSzcTEayJ2n36qdP5lx9wRpQ0K "This is an online image")
+![Example image](https://soqmsb04dk.ufs.sh/f/KBljPeC0dD9GYgaycf5LFUnb93sQApvMXCBgxW6tSHNVGy5h "This is an online image")
 
 ### Component Breakdown
 
