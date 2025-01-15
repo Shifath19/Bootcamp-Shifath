@@ -1,5 +1,6 @@
-**Collaborative Annotation System Design Document
-Problem Definition:**
+# Collaborative Annotation System
+
+**Problem Definition:**
 
 The system aims to create a foundational framework for building collaborative web applications where users can interact with, visualize, and annotate various types of data produced by computational tools and AI/LLM systems. This is not just a domain-specific solution but a platform-level framework that other applications can build upon.
 

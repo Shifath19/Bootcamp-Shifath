@@ -76,13 +76,6 @@ Gain insights into ongoing research.
 [API Server] --> [Backend Service] --> [Frontend Dashboard] --> [User]
 ```
 
-### Data Flow Diagram
-
-1. User enters a search query.
-2. The frontend sends a request to the backend.
-3. Backend retrieves data from the API.
-4. Data is processed and sent to the frontend.
-5. User views results and interacts with the table.
 
 ## Milestones
 

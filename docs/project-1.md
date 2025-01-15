@@ -1,8 +1,8 @@
-**Antibody Analyzer**
+# Antibody Analyzer
 
-\-Shifath ali
 
-**1\. Problem Statement**
+
+## Problem Statement
 
 **What**: A web application that helps scientists analyze antibody molecules by:
 
@@ -40,7 +40,7 @@
 
 This is essentially a specialized scientific visualization tool that connects tabular data with 3D molecular structures to aid in antibody development.
 
-**2\. Technical Understanding**
+## 2. Technical Understanding**
 
 Key Components
 
@@ -74,10 +74,10 @@ o   Property mapping to structural elements
 
 o   Real-time visualization updates
 
-**3.System Architecture**
+## 3.System Architecture
 ![Example image](https://soqmsb04dk.ufs.sh/f/KBljPeC0dD9GSUq4x41jfEMNglRXhbiIz6Zm1sOJ2LKSoW0p "This is an online image")
 
-**4\. Implementation Phases**
+## 4. Implementation Phases
 
 **Phase 1: Research & Setup**
 
@@ -139,59 +139,8 @@ o   Real-time visualization updates
 
 ·        Deployment preparation
 
-**5\. Integration Strategy**
 
-**API Integration**
-
-1.        **Scorecard API**
-
-o   Endpoint: /api/scorecard
-
-o   Returns: JSON with antibody properties and scores
-
-2.        **Structure API**
-
-o   Endpoint: /api/structure/{id}
-
-o   Returns: PDB format structure data
-
-3.        **Property API**
-
-o   Endpoint: /api/properties/{id}
-
-o   Returns: Residue-specific property data
-
-**Component Integration**
-
-·        Components for modular development
-
-·        MolStar as a wrapped React component
-
-·        Event-driven communication between components
-
-·        Centralized state management for data consistency
-
-**7\. Next.js-Specific Architecture**
-
-**Server vs Client Components**
-
-1.        **Server Components (Default)**
-
-o   Scorecard table rendering
-
-o   Initial data fetching
-
-o   Static UI elements
-
-2.        **Client Components ("use client")**
-
-o   MolStar visualization
-
-o   Interactive controls
-
-o   Real-time property updates
-
-**8.Exit Criteria**
+## 5.Exit Criteria
 
 1.Functional Completeness
 
